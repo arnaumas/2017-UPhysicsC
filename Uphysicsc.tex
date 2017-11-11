@@ -129,7 +129,7 @@ And thus we obtain
 Finally, we can rewrite the equations of motion for a solar sail in this more general case as follows:
 \begin{align}
   \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2\label{carlessexy} \\ 
-  \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= -a_R	\sin{\alpha} \cos^2{\alpha} \left(\dfrac{r_0}{r}\right)^2
+  \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= -a_R	\sin{\alpha} \cos^2{\alpha} \left(\dfrac{r_0}{r}\right)^2\label{carlessexy2}
 \end{align}
 As a consistency check,  we note that if \( \alpha = 0 \), that is, the sail is orthogonal to the radiation, we recover \autoref{eq:equations of motion characteristic accelerations}. However, the equations we have just obtained are \emph{not} the equations for a particle experiencing central force motion.   
 
@@ -192,8 +192,15 @@ Figure ?? shows a first approximation of the trajectory taken by the space craft
 	\includegraphics[scale=0.5]{espiral.png}
 	\label{espiral}
 	\caption{\small First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axis in AU.}
+
 \end{figure}
 
+
+\section{No sé quin títol}
+\subsection{First simulation?}
+Solutions of equations \ref{carlessexy} and \ref{carlessexy2} have been simulated. Figure ?? shows the trajectory followed by the sail. It is direct that it is still a spiral, but not a logaritmic one as in Figure \ref{espiral}. Note that the trajectory of the sail is not tangent anymore to the orbit of Mars.
+
+The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Without considering the gravitational pull exerted by Mars, and approximating both curves to tangent, the relative velocity between both bodies is $-4km/s$, meaning Mars, which is behind the sail, reaches the spacecraft at a speed of $4km/s$.
 
 
 \bibliographystyle{ieeetr}
