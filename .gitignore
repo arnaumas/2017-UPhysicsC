@@ -7,5 +7,6 @@
 *.fdb_latexmk
 *.aux
 *.synctex.gz
+*.blg
 _minted-UPhsyicsC/*
 Uphysicsc.pdf
