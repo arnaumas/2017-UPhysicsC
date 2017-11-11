@@ -1,88 +1,53 @@
-\documentclass[aps,prl,reprint]{revtex4-1}
-\makeatletter
-\def\Dated@name{}
-\makeatother
+\documentclass[twocolumn,12pt,a4paper]{article}
 
-\usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage[top=3cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{fancyhdr,hyperref,lastpage}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage[bf,sf]{titlesec}
+\usepackage{titling}
+\usepackage{abstract}
 \usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb,units}
-\usepackage{graphicx}
-\usepackage{dcolumn}
-\usepackage{float, fancyhdr}
-\usepackage{footnote, minted}
-
+\usepackage{siunitx}
 
 \pagestyle{fancy}
-\fancyhf{}
-\rhead{Team number: 891}
-\begin{document}
+\lhead{}
+\chead{\textsf{Team 891}}
+\cfoot{\thepage{} of \pageref*{LastPage}}
 
-	
-	%Título do Relatório
-	
-	\author{Team number: 891\\ Problem A\\Aquí va el títol}
-	
-	\begin{abstract}
-		
-		\begin{center}
-			
-			\rule{15cm}{1pt} \\
-			
-		\end{center}
-		
-		Ací va l'abstract que queda bonic blablablablablablablablablablablabla
-		\begin{center}
-			
-			\rule{15cm}{1pt} \\
-			
-		\end{center}
-		
-	\end{abstract}
-	
-	\maketitle
-	\onecolumngrid\newpage\twocolumngrid
-	\section{Introducció}
-	+ blablablablablalbalbalblalbalblala
-	
-	\begin{minted}{python}
-	import numpy as np
-	
-	def incmatrix(genl1,genl2):
-	m = len(genl1)
-	n = len(genl2)
-	M = None #to become the incidence matrix
-	VT = np.zeros((n*m,1), int)  #dummy variable
-	
-	#compute the bitwise xor matrix
-	M1 = bitxormatrix(genl1)
-	M2 = np.triu(bitxormatrix(genl2),1) 
-	
-	for i in range(m-1):
-	for j in range(i+1, m):
-	[r,c] = np.where(M2 == M1[i,j])
-	for k in range(len(r)):
-	VT[(i)*n + r[k]] = 1;
-	VT[(i)*n + c[k]] = 1;
-	VT[(j)*n + r[k]] = 1;
-	VT[(j)*n + c[k]] = 1;
-	
-	if M is None:
-	M = np.copy(VT)
-	else:
-	M = np.concatenate((M, VT), 1)
-	
-	VT = np.zeros((n*m,1), int)
-	
-	return M
-	\end{minted}
-	\section{References}
-	[1] J. COSTA QUINTANA. En principi és a dir. $5{\textsuperscript{\underline{a}}}$ edição. São Paulo - SP: Edgard Blucher, 2014. 
-	
-	
-	
-	
-	
-	
+\author{\textsf{Team 891}}
+\title{\textsf{\textbf{Problem A: Solar Sailing from Earth to Mars}}}
+\date{\textsf{November 12, 2017}}
+
+\begin{document}
+\renewcommand{\abstractname}{}
+\renewcommand{\absnamepos}{empty}
+\begin{titlingpage}
+ \maketitle
+
+\noindent \hrulefill \\
+\begin{abstract}
+Test test test
+
+\end{abstract}
+\hrulefill \\
+
+\end{titlingpage}
+
+\clearpage
+
+\section{Introduction}
+
+\section{The physics of solar sailing}
+\subsection{Radiation pressure}
+It is well-known that electromagnetic wave carries an energy density. The fundamental idea behind solar sails is to use this energy as a means of propulsion in a way very much similar to how traditional sails take advantage of the kinetic energy of the wind. Given that the diameter of any reasonable solar sail will be much smaller than its distance to the Sun, one may approximate the solar radiation that arrives at the sail in the form of sinusoidal planar waves of frequency \( \omega \).
+
+If \( E(t) \) is the amplitude of such waves, then the energy density, \( u \), they carry is given by \( u = \epsilon_0 E(t)^2 = \epsilon_0 E_0^2 \cos^2{\omega t} \). If one averages this over a period \( T \), then one obtains that the average energy density is simply \( \epsilon_0 E_0^2 /2 \), which can be rewritten as \( I/c \), where \( I \) is the intensity of the wave and \( c \) is the speed of light. Thus one finds that the pressure that incoming radiation exerts on the sail is \( I/c \). However, given that the material of the sail is not a black body, a fraction, \( R \), of the absorbed radiation will be emitted, giving rise to an additional term of pressure of the form \( RI/c \). If the sail is made out of a perfectly reflective material then it is the case that \( R = 1 \) and then the total pressure exerted on the sail is \( p = 2I/c \). This is the case for the problem at hand.
+
+The intensity of a spherical wave is inversely proportional to the square of the distance from the source. Thus, the force exerted on the sail by the radiation from the Sun follows an inverse square law. We can make this dependence explicit by   
+
 \end{document}
+
