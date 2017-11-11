@@ -148,7 +148,20 @@ Literature suggests \cite{tsu} one can neglect the  $\dot{v}_r$ term in equation
 - \dfrac{v_{\theta}^2}{r} = (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2
 \end{equation} 
 which can be directly solved.
-Solving for $v_{\theta}$ and directly integrating, one can find the time of travel between radii $r_0$ and $r$.
+
+Having solved both velocities, one finds the trajectory taken is a logarithmic spiral, which only depends on the ratio \(a_G/a_R\) and $\alpha$.
+Figure 1 shows a first approximation of the trajectory taken by the space craft with the mentioned suppositions and values.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{espiral.png}
+	\label{espiral}
+	\caption{\small First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axis in AU.}
+	
+\end{figure}
+
+
+Solving Equation 3.1 for $v_{\theta}$ and directly integrating, one can find the time of travel between radii $r_0$ and $r$.
 \begin{equation}
 	t=\frac{1}{3}\cdot\frac{r_0^{3/2}-r^{3/2}}{r_0\sqrt{a_R}}\cdot\frac{(a_G/a_R-\cos^3\alpha)^{1/2}}{\sin\alpha\cos^2\alpha}
 \end{equation}
@@ -172,29 +185,19 @@ Imposing the condition that its derivative must be equal to zero one obtains
 \end{figure}
 Computing for the optimal sail pitch angle one finds sligtly different values depending on $\beta$. Nevertheless, looking at \autoref{fig:arnauoficinista} one notices that for similar $\beta$ numbers the optimal angles are around $\alpha=0.62$ rad. Now, the only unknown variable in the time flight formula is the mass of the solar sail $m_s$.
 
-Obviously, the time flight will decrease as the mass of the solar sail becomes bigger as this implies a bigger surface and as a consequence a bigger thrust. This fact is shown in \autoref{fig:time}
+Obviously, the time flight will decrease as the mass of the solar sail becomes bigger as this implies a bigger surface and as a consequence a bigger thrust. This fact is shown in \autoref{fig:time}.
 \begin{figure}[h]
-	\label{fig:time}
 	\centering
-	\includegraphics[scale=0.3]{time}
+	\includegraphics[scale=0.35]{time}
 	\caption{\small Decrease of the flight time  }
+	\label{fig:time}
 \end{figure}
 
-Thus, as a first approximation, the time of travel will be, substituting,
-\[
-Look it up
-\]
-Having solved both velocities, one finds the trajectory taken is a logarithmic spiral, which only depends on the ratio \(a_G/a_R\) and $\alpha$.
-Figure ?? shows a first approximation of the trajectory taken by the space craft with the mentioned suppositions and values.
+Firstly, it must be stated that with a maximum payload of $2000kg$ one cannot safely send a manned space craft. Therefore, we will consider a mission consisting on sending just material.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{espiral.png}
-	\label{espiral}
-	\caption{\small First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axis in AU.}
+One must now decide on a formula which will have both a reasonable time of travel and a sufficient amount of payload so that the mission is profitable. Researching past missions to Mars, time travels of about one year are reasonable and, to have an idea, a rover like Curiosity weights about $900kg$. Of course, extra material is needed, but, according to research, $1000kg$ of payload seems a reasonable choice. From equation 3.2 it is found that the flight time will be around 390 days, which, as stated, seems feasible.
 
-\end{figure}
-
+Choosing to distribute equally the mass of the sail and the mass of the sail, one gets a value for the solar sail lightness of $\beta=0.1088$. From now on, this value will be assumed to be equal to 0.1, since most of the other characteristics can be found in literature for such value.
 
 \section{No sé quin títol}
 \subsection{First simulation?}
