@@ -68,14 +68,26 @@ where \( m \) is the mass of the solar sail ---including the mass of the payload
 
 Thus, we are now in a position to write the equations of motion for the solar sail
 \begin{align}
-	a_{r} &= \dot{v}_r - \dfrac{v_{\theta}^2}{r} = \dfrac{F_R - F_G}{m} \refstepcounter{equation} \tag{\theequation{}a} \\
-	a_{\theta} &= \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} = 0 \tag{\theequation{}b}
+	a_{r} &= \dot{v}_r - \dfrac{v_{\theta}^2}{r} = \dfrac{F_R - F_G}{m} \label{eq:equations of motion perpendicular} \\
+	a_{\theta} &= \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} = 0 
 \end{align}
-It is common to introduce a number of parameters to better encapsulate the nature of a solar sail. The characteristic acceleration of a solar sail, \( a_0 \), is defined to be the acceleration the sail experiences due to radiation pressure at a distance equal to 1 astronomical unit (AU) from the Sun:
+It is common to introduce a number of parameters to better encapsulate the nature of a solar sail. The characteristic acceleration of a solar sail, \( a_R \), is defined to be the acceleration the sail experiences due to radiation pressure at a distance equal to 1 astronomical unit (AU) from the Sun. In keeping with the notation introduced in the previous section we write
 \begin{equation}
-  a_0 = \dfrac{2SI_0}{mc}
+  a_R = \dfrac{2SI_0}{mc}
 \end{equation}
-where we are sticking to the notation introduced in the previous section.
+It is then immediate to see that, if we denote the acceleration due to radiation pressure by \( a_R \) we have
+\begin{equation}
+  a(r) = a_R \dfrac{r_0^2}{r^2} 
+\end{equation}
+We can do the same with the acceleration due to gravity and we find
+\begin{equation}
+  a(r) = a_G \dfrac{r_0^2}{r^2} = \dfrac{G M_s}{r_0^2} \dfrac{r_0^2}{r^2}
+\end{equation}
+With this in mind we can then rewrite \autoref{eq:equations of motion perpendicular} as follows
+\begin{align}
+  \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R - a_G) \left(\dfrac{r_0}{r}\right)^2 \\
+	\dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= 0
+\end{align}
 
 \end{document}
 
