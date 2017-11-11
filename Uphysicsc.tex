@@ -123,6 +123,20 @@ As a consistency check,  we note that if \( \alpha = 0 \), that is, the sail is 
 \subsection{Payload time opt}
 
 \subsection{The logarithmic spiral trajectory}
-Literature suggests (TSUU) 
+Literature suggests \liter{tsu} one can neglect the  $\dot{v}_r$ term in equation !!! as a first approach. The simplified equation reads
+\begin{equation}
+- \dfrac{v_{\theta}^2}{r} = (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2
+\end{equation} 
+which can be directly solved.
+Solving for $v_{\theta}$ and directly integrating, one can find the time of travel between radii $r_0$ and $r$.
+\begin{equation}
+	t=\frac{1}{3}\cdot\frac{r_0^{3/2}-r^{3/2}}{r_0\sqrt{a_R}}\cdot\frac{(a_G/a_R-\cos^3\alpha)^{1/2}}{\sin\alpha\cos^2\alpha}
+\end{equation}
+Thus, as a first approximation, the time of travel will be, substituting,
+\[
+Look it up
+\]
+Having solved both velocities, one finds the trajectory taken is a logarithmic spiral, which only depends on the ratio \(a_G/a_R\) and $\alpha$.
+Figure ?? shows a first approximation of the trajectory taken by the space craft with the mentioned suppositions and values.
 \end{document}
 
