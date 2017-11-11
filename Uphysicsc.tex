@@ -5,7 +5,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{multicol}
 \usepackage[top=3cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry}
-\usepackage{fancyhdr,hyperref,lastpage}
+\usepackage[bookmarks=true,bookmarksnumbered=true,hidelinks]{hyperref}
+\usepackage{fancyhdr,lastpage}
 \renewcommand{\footrulewidth}{0.4pt}
 \usepackage[bf,sf]{titlesec}
 \usepackage{titling}
@@ -17,6 +18,11 @@
 \lhead{}
 \chead{\textsf{Team 891}}
 \cfoot{\thepage{} of \pageref*{LastPage}}
+
+\setlength{\columnsep}{1.5cm}
+
+% Numerar equacions amb la secció
+\numberwithin{equation}{section}
 
 \author{\textsf{Team 891}}
 \title{\textsf{\textbf{Problem A: Solar Sailing from Earth to Mars}}}
@@ -47,7 +53,24 @@ It is well-known that electromagnetic wave carries an energy density. The fundam
 
 If \( E(t) \) is the amplitude of such waves, then the energy density, \( u \), they carry is given by \( u = \epsilon_0 E(t)^2 = \epsilon_0 E_0^2 \cos^2{\omega t} \). If one averages this over a period \( T \), then one obtains that the average energy density is simply \( \epsilon_0 E_0^2 /2 \), which can be rewritten as \( I/c \), where \( I \) is the intensity of the wave and \( c \) is the speed of light. Thus one finds that the pressure that incoming radiation exerts on the sail is \( I/c \). However, given that the material of the sail is not a black body, a fraction, \( R \), of the absorbed radiation will be emitted, giving rise to an additional term of pressure of the form \( RI/c \). If the sail is made out of a perfectly reflective material then it is the case that \( R = 1 \) and then the total pressure exerted on the sail is \( p = 2I/c \). This is the case for the problem at hand.
 
-The intensity of a spherical wave is inversely proportional to the square of the distance from the source. Thus, the force exerted on the sail by the radiation from the Sun follows an inverse square law. We can make this dependence explicit by   
+The intensity of a spherical wave is inversely proportional to the square of the distance from the source. Thus, the force exerted on the sail by the radiation from the Sun follows an inverse square law. We can make this dependence explicit by considering the equality \( Ir^2 = I_0 r^2_0 \), where \( I_0 \) is the intensity of solar radiation at a distance equal to the radius of the orbit of the Earth, \( r_0 \). And so we find that the force due to radiation pressure on a sail of surface area \( S \) is
+\begin{equation}
+ 	\mathbf{F}_R(r) = \dfrac{2SI_0r_0^2}{c}\dfrac{1}{r^2} \mathbf{\hat{e}}_r \label{eq:radiation force}
+\end{equation}
+
+\section{Equations of motion for a solar sail}
+We have established that a solar sail that receives radiation in a direction orthogonal to itself experiences an inverse square central force. The other force acting on the sail is gravitational attraction due to the Sun ---we will consider the gravitational pull from other planets to be negligible when compared to that of the Sun---, which is also an inverse square force law. Namely:
+\begin{equation}
+ 	\mathbf{F}_G(r) = -\dfrac{G M_S m}{r^2} \mathbf{\hat{e}}_r \label{eq:gravitational force}
+\end{equation}
+where \( m \) is the mass of the solar sail ---including the mass of the payload--- and \( M_S \) is the mass of the Sun.
+
+Thus, we are now in a position to write the equations of motion for the solar sail
+\begin{equation}
+  \begin{aligned}
+    
+  \end{aligned}
+\end{equation}
 
 \end{document}
 
