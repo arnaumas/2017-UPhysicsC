@@ -1,4 +1,4 @@
-﻿https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20030093608.pdf
+https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20030093608.pdf
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19720004068.pdf
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20040086066.pdf
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19670030985.pdf aquest
@@ -9,3 +9,4 @@ https://www.windows2universe.org/mars/mars_orbit.html simulació orbites
 https://smartech.gatech.edu/bitstream/handle/1853/14747/HumanMarsMissionTrajectories.pdf trajectòries
 http://sci-hub.cc/10.1177/0954410012465244
 https://sci-hub.cc/https://doi.org/10.2514/8.4791 t tsu
+http://ccar.colorado.edu/ASEN5050/projects/projects_2016/DeLuca_Michael/applications.html Canvi d'òrbita
