@@ -51,7 +51,7 @@ Throughout the article, several assumptions have been made, both as interpretati
 \begin{itemize}
 \item The orbits of Mars and the Earth are coplanar and perfectly circular.
 \item The only forces acting on the sail during its flight are the gravitational force exerted by the Sun and the thrust given by the inciding photons. Since the initial radial velocity is the Earth escape velocity, it is reasonable not to consider its attraction. However, Mars gravitational pull has been taken into account when calculating the arriving velocity.
-\item As stated in the problem given, we assume the total mass of the space craft is 2.000kg, including the payload and the sail. Thus, our goal is to maximaze the payload while still finding a reasonable time of flight. 
+\item As stated in the problem given, we assume the total mass of the space craft is \SI{2 000}{kg} , including the payload and the sail. Thus, our goal is to maximize the payload while still finding a reasonable time of flight. 
 \item Comparing the research which has already been done to the fact that the preassure exerted by light is twice its energy density, one finds that the case given is one of a perfect reflection.
 \item We assume the only initial radial velocity of the sail is the Earth's linear velocity. Thus, one ignores the effects of the Earth's rotation.
 \end{itemize}
@@ -68,7 +68,7 @@ The intensity of a spherical wave is inversely proportional to the square of the
  	\mathbf{F}_R(r) = \dfrac{2SI_0r_0^2}{c}\dfrac{1}{r^2} \mathbf{\hat{e}}_r \label{eq:radiation force}
 \end{equation}
 
-\section{Equations of motion for a solar sail}
+\subsection{Equations of motion for a solar sail}
 We have established that a solar sail that receives radiation in a direction orthogonal to itself experiences an inverse square central force. The other force acting on the sail is gravitational attraction due to the Sun ---we will consider the gravitational pull from other planets to be negligible when compared to that of the Sun---, which is also an inverse square force law. Namely:
 \begin{equation}
  	\mathbf{F}_G(r) = -\dfrac{G M_S m}{r^2} \mathbf{\hat{e}}_r \label{eq:gravitational force}
@@ -97,6 +97,7 @@ With this in mind we can then rewrite \autoref{eq:equations of motion perpendicu
   \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R - a_G) \left(\dfrac{r_0}{r}\right)^2 \\
 	\dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= 0
 \end{align}
+As we have already mentioned, this shows that a solar sail receiving radiation orthogonal to itself moves as if 
 
 \end{document}
 
