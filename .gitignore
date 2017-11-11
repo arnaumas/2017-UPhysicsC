@@ -1,5 +1,10 @@
 .DS_Store
 *.swp
+*.log
+*.out
+*.bbl
+*.fls
+*.fdb_latexm
 *.aux
 *.synctex.gz
-_*
+_minted-UPhsyicsC/*
