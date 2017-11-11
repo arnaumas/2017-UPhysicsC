@@ -9,11 +9,10 @@
 \usepackage{fancyhdr,lastpage}
 \renewcommand{\footrulewidth}{0.4pt}
 \usepackage[bf,sf]{titlesec}
+\usepackage{siunitx}
 \usepackage{titling}
 \usepackage{abstract}
 \usepackage{amsmath}
-\usepackage{siunitx}
-
 \pagestyle{fancy}
 \lhead{\textsf{Solar Sailing from Earth to Mars}}
 \rhead{\textsf{Team 891}}
@@ -58,6 +57,7 @@ Throughout the article, several assumptions have been made, both as interpretati
 
 
 \section{The physics of solar sailing}
+We will follow \cite{tsu} and \cite{mcinnes} for most of this section.
 \subsection{Radiation pressure}
 It is well-known that electromagnetic wave carries an energy density. The fundamental idea behind solar sails is to use this energy as a means of propulsion in a way very much similar to how traditional sails take advantage of the kinetic energy of the wind. Given that the diameter of any reasonable solar sail will be much smaller than its distance to the Sun, one may approximate the solar radiation that arrives at the sail in the form of sinusoidal planar waves of frequency \( \omega \).
 
@@ -118,9 +118,9 @@ Finally, we can rewrite the equations of motion for a solar sail in this more ge
 \end{align*}
 As a consistency check,  we note that if \( \alpha = 0 \), that is, the sail is orthogonal to the radiation, we recover \autoref{eq:equations of motion characteristic accelerations}. However, the equations we have just obtained are \emph{not} the equations for a particle experiencing central force motion.   
 
+\section{First Results}
+\subsection{Payload Analysis}
 
-\section{First results}
-\subsection{Payload time opt}
 
 \subsection{The logarithmic spiral trajectory}
 Literature suggests \liter{tsu} one can neglect the  $\dot{v}_r$ term in equation !!! as a first approach. The simplified equation reads
@@ -138,5 +138,8 @@ Look it up
 \]
 Having solved both velocities, one finds the trajectory taken is a logarithmic spiral, which only depends on the ratio \(a_G/a_R\) and $\alpha$.
 Figure ?? shows a first approximation of the trajectory taken by the space craft with the mentioned suppositions and values.
-\end{document}
 
+\bibliographystyle{ieeetr}
+\bibliography{UphysicscNotes}
+
+\end{document}
