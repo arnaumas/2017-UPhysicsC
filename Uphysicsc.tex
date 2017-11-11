@@ -137,11 +137,11 @@ As a consistency check,  we note that if \( \alpha = 0 \), that is, the sail is 
 \subsection{The logarithmic spiral trajectory and discussion of a suitable distribuiton of mass}
 According to what has been discussed in the previous section, there are some variables of the sail which have to be calculated. This are
 \[
-a_R=6,45\cdot 10^{-7} \cdot M_w
+a_R=6,45\cdot 10^{-7} \cdot m_s
 \]
 \[a_G=5,928\cdot 10^{-3}
 \]
-where $M_w$ denotes the mass of the sail.
+where $m_s$ denotes the mass of the sail.
 Another parameter
 Literature suggests \cite{tsu} one can neglect the  $\dot{v}_r$ term in equation \ref{carlessexy} as a first approach. The simplified equation reads
 \begin{equation}
@@ -152,6 +152,34 @@ Solving for $v_{\theta}$ and directly integrating, one can find the time of trav
 \begin{equation}
 	t=\frac{1}{3}\cdot\frac{r_0^{3/2}-r^{3/2}}{r_0\sqrt{a_R}}\cdot\frac{(a_G/a_R-\cos^3\alpha)^{1/2}}{\sin\alpha\cos^2\alpha}
 \end{equation}
+In order to optimize the flight time it is useful to define the solar sail lightness number which can be calculated as
+\begin{equation}
+	\beta=\frac{a_R}{a_G}
+\end{equation}
+Using the last two expressions one can find that minimising timeflight implies minimising function of $\alpha$
+\begin{equation}
+	\frac{(1-\beta\cos^3\alpha)^{1/2}}{\beta\cos^2\alpha\sin\alpha}
+\end{equation}
+Imposing the condition that its derivative must be equal to zero one obtains
+\begin{equation}
+	\beta-\frac{2}{\cos\alpha}\frac{1-2\tan^2\alpha}{2-\tan^2\alpha}=0
+\end{equation}
+\begin{figure}[h] \label{fig:arnauoficinista}
+	
+	\centering
+	\includegraphics[scale=0.3]{angle.png}
+	\caption{\small Different values for the function of $\alpha$}
+\end{figure}
+Computing for the optimal sail pitch angle one finds sligtly different values depending on $\beta$. Nevertheless, looking at \autoref{fig:arnauoficinista} one notices that for similar $\beta$ numbers the optimal angles are around $\alpha=0.62$ rad. Now, the only unknown variable in the time flight formula is the mass of the solar sail $m_s$.
+
+Obviously, the time flight will decrease as the mass of the solar sail becomes bigger as this implies a bigger surface and as a consequence a bigger thrust. This fact is shown in \autoref{fig:time}
+\begin{figure}[h]
+	\label{fig:time}
+	\centering
+	\includegraphics[scale=0.3]{time}
+	\caption{\small Decrease of the flight time  }
+\end{figure}
+
 Thus, as a first approximation, the time of travel will be, substituting,
 \[
 Look it up
@@ -159,7 +187,7 @@ Look it up
 Having solved both velocities, one finds the trajectory taken is a logarithmic spiral, which only depends on the ratio \(a_G/a_R\) and $\alpha$.
 Figure ?? shows a first approximation of the trajectory taken by the space craft with the mentioned suppositions and values.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{espiral.png}
 	\label{espiral}
