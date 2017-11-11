@@ -68,7 +68,7 @@ The intensity of a spherical wave is inversely proportional to the square of the
  	\mathbf{F}_R(r) = \dfrac{2SI_0r_0^2}{c}\dfrac{1}{r^2} \mathbf{\hat{e}}_r \label{eq:radiation force}
 \end{equation}
 
-\subsection{Equations of motion for a solar sail}
+\subsection{Equations of motion for a solar sail: orthogonal case}
 We have established that a solar sail that receives radiation in a direction orthogonal to itself experiences an inverse square central force. The other force acting on the sail is gravitational attraction due to the Sun ---we will consider the gravitational pull from other planets to be negligible when compared to that of the Sun---, which is also an inverse square force law. Namely:
 \begin{equation}
  	\mathbf{F}_G(r) = -\dfrac{G M_S m}{r^2} \mathbf{\hat{e}}_r \label{eq:gravitational force}
@@ -99,6 +99,7 @@ With this in mind we can then rewrite \autoref{eq:equations of motion perpendicu
 \end{align}
 As we have already mentioned, this shows that the motion of a solar sail receiving radiation orthogonal to itself is governed by an inverse square law. In particular, the sail will move as if it were orbiting a star with a mass less than the Sun.
 
+\subsection{Equations of motion for a solar sail: general case}
 This, however, is only true if the sail is orthogonal to the incoming radiation. Indeed, if we allow for the sail to be at an arbitrary orientation, then its tangential acceleration is no longer zero. For this, we introduce the angle \( \alpha \), which is the angle between the vector normal to the sail, \( \hat{\mathbf{n}} \), and the radial direction. Now, the force due to radiation pressure has two contributions. The incoming photons exert a force that is now proportional to the orthogonal projection of the sail onto the radial direction, therefore of \( IS\cos{\alpha}/c \). This force is in the radial direction. The emitted photons exert a force that has the same modulus, but given that the sail behaves like a mirror, they are emmited in the direction orthogonal to the radial direction, and so the force due to the outgoing radiation is proportional to \( {-\hat{\mathbf{e}}_{\theta}} \). So we have
 \begin{equation}
   \mathbf{F}_R(r) = \dfrac{2IS \cos{\alpha}}{c} ( \hat{\mathbf{e}}_{r} - \hat{\mathbf{e}}_{\theta})
