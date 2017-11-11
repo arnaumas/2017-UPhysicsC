@@ -10,7 +10,7 @@
 \renewcommand{\footrulewidth}{0.4pt}
 \usepackage[bf,sf]{titlesec}
 \usepackage{siunitx}
-\usepackage{titling}
+\usepackage{titling,graphicx}
 \usepackage{abstract}
 \usepackage{amsmath}
 \usepackage{siunitx}
@@ -124,17 +124,23 @@ And thus we obtain
 \end{align}
 
 Finally, we can rewrite the equations of motion for a solar sail in this more general case as follows:
-\begin{align*}
-  \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2 \\ 
+\begin{align}
+  \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2\label{carlessexy} \\ 
   \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= -a_R	\sin{\alpha} \cos^2{\alpha} \left(\dfrac{r_0}{r}\right)^2
-\end{align*}
+\end{align}
 As a consistency check,  we note that if \( \alpha = 0 \), that is, the sail is orthogonal to the radiation, we recover \autoref{eq:equations of motion characteristic accelerations}. However, the equations we have just obtained are \emph{not} the equations for a particle experiencing central force motion.   
 
 \section{First Results}
-\subsection{Payload Analysis}
-
-\subsection{The logarithmic spiral trajectory}
-Literature suggests \cite{tsu} one can neglect the  $\dot{v}_r$ term in equation !!! as a first approach. The simplified equation reads
+\subsection{The logarithmic spiral trajectory and discussion of a suitable distribuiton of mass}
+According to what has been discussed in the previous section, there are some variables of the sail which have to be calculated. This are
+\[
+a_R=6,45\cdot 10^{-7} \cdot M_w
+\]
+\[a_G=5,928\cdot 10^{-3}
+\]
+where $M_w$ denotes the mass of the sail.
+Another parameter
+Literature suggests \cite{tsu} one can neglect the  $\dot{v}_r$ term in equation \ref{carlessexy} as a first approach. The simplified equation reads
 \begin{equation}
 - \dfrac{v_{\theta}^2}{r} = (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2
 \end{equation} 
@@ -150,11 +156,16 @@ Look it up
 Having solved both velocities, one finds the trajectory taken is a logarithmic spiral, which only depends on the ratio \(a_G/a_R\) and $\alpha$.
 Figure ?? shows a first approximation of the trajectory taken by the space craft with the mentioned suppositions and values.
 
+\begin{figure}
+	\includegraphics[scale=0.5]{espiral.png}
+	\label{espiral}
+	\caption[font=smallest]{First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axis in AU.}
+\end{figure}
+
+
+
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
 
 \end{document}
-<<<<<<< HEAD
 
-=======
->>>>>>> 3579e496361fe3d01b8e57d90ac9d0df1b4b1ea2
