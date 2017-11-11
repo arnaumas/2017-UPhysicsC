@@ -1,23 +1,94 @@
-\documentclass[aps,prl,reprint]{revtex4-1}
-\makeatletter
-\def\Dated@name{}
-\makeatother
+\documentclass[twocolumn,12pt,a4paper]{article}
 
-\usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage[top=3cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[bookmarks=true,bookmarksnumbered=true,hidelinks]{hyperref}
+\usepackage{fancyhdr,lastpage}
+\renewcommand{\footrulewidth}{0.4pt}
+\usepackage[bf,sf]{titlesec}
+\usepackage{titling}
+\usepackage{abstract}
 \usepackage{amsmath}
+<<<<<<< HEAD
 \usepackage{amsthm}
 \usepackage{amssymb,units}
 \usepackage{graphicx}
 \usepackage{dcolumn}
 \usepackage{float, fancyhdr}
 
+=======
+\usepackage{siunitx}
+>>>>>>> 5ee3f750a83bb53684119e47f3bbd21fe8fbb308
 
 \pagestyle{fancy}
-\fancyhf{}
-\rhead{Team number: 891}
-\begin{document}
+\lhead{}
+\chead{\textsf{Team 891}}
+\rhead{}
+\cfoot{\thepage{} of \pageref*{LastPage}}
 
+\setlength{\columnsep}{1.5cm}
+
+% Numerar equacions amb la secció
+\numberwithin{equation}{section}
+
+\author{\textsf{Team 891}}
+\title{\textsf{\textbf{Problem A: Solar Sailing from Earth to Mars}}}
+\date{\textsf{November 12, 2017}}
+
+\begin{document}
+\renewcommand{\abstractname}{}
+\renewcommand{\absnamepos}{empty}
+\begin{titlingpage}
+ \maketitle
+
+\noindent \hrulefill \\
+\begin{abstract}
+Test test test
+
+\end{abstract}
+\hrulefill \\
+
+\end{titlingpage}
+
+\clearpage
+
+\section{Introduction}
+
+\section{The physics of solar sailing}
+\subsection{Radiation pressure}
+It is well-known that electromagnetic wave carries an energy density. The fundamental idea behind solar sails is to use this energy as a means of propulsion in a way very much similar to how traditional sails take advantage of the kinetic energy of the wind. Given that the diameter of any reasonable solar sail will be much smaller than its distance to the Sun, one may approximate the solar radiation that arrives at the sail in the form of sinusoidal planar waves of frequency \( \omega \).
+
+If \( E(t) \) is the amplitude of such waves, then the energy density, \( u \), they carry is given by \( u = \epsilon_0 E(t)^2 = \epsilon_0 E_0^2 \cos^2{\omega t} \). If one averages this over a period \( T \), then one obtains that the average energy density is simply \( \epsilon_0 E_0^2 /2 \), which can be rewritten as \( I/c \), where \( I \) is the intensity of the wave and \( c \) is the speed of light. Thus one finds that the pressure that incoming radiation exerts on the sail is \( I/c \). However, given that the material of the sail is not a black body, a fraction, \( R \), of the absorbed radiation will be emitted, giving rise to an additional term of pressure of the form \( RI/c \). If the sail is made out of a perfectly reflective material then it is the case that \( R = 1 \) and then the total pressure exerted on the sail is \( p = 2I/c \). This is the case for the problem at hand.
+
+The intensity of a spherical wave is inversely proportional to the square of the distance from the source. Thus, the force exerted on the sail by the radiation from the Sun follows an inverse square law. We can make this dependence explicit by considering the equality \( Ir^2 = I_0 r^2_0 \), where \( I_0 \) is the intensity of solar radiation at a distance equal to the radius of the orbit of the Earth, \( r_0 \). And so we find that the force due to radiation pressure on a sail of surface area \( S \) is
+\begin{equation}
+ 	\mathbf{F}_R(r) = \dfrac{2SI_0r_0^2}{c}\dfrac{1}{r^2} \mathbf{\hat{e}}_r \label{eq:radiation force}
+\end{equation}
+
+\subsection{Equations of motion for a solar sail}
+We have established that a solar sail that receives radiation in a direction orthogonal to itself experiences an inverse square central force. The other force acting on the sail is gravitational attraction due to the Sun ---we will consider the gravitational pull from other planets to be negligible when compared to that of the Sun---, which is also an inverse square force law. Namely:
+\begin{equation}
+ 	\mathbf{F}_G(r) = -\dfrac{G M_S m}{r^2} \mathbf{\hat{e}}_r \label{eq:gravitational force}
+\end{equation}
+where \( m \) is the mass of the solar sail ---including the mass of the payload--- and \( M_S \) is the mass of the Sun.
+
+Thus, we are now in a position to write the equations of motion for the solar sail
+\begin{align}
+	a_{r} &= \dot{v}_r - \dfrac{v_{\theta}^2}{r} = \dfrac{F_R - F_G}{m} \refstepcounter{equation} \tag{\theequation{}a} \\
+	a_{\theta} &= \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} = 0 \tag{\theequation{}b}
+\end{align}
+It is common to introduce a number of parameters to better encapsulate the nature of a solar sail. The characteristic acceleration of a solar sail, \( a_0 \), is defined to be the acceleration the sail experiences due to radiation pressure at a distance equal to 1 astronomical unit (AU) from the Sun:
+\begin{equation}
+  a_0 = \dfrac{2SI_0}{mc}
+\end{equation}
+where we are sticking to the notation introduced in the previous section.
+
+\end{document}
+
+<<<<<<< HEAD
 	
 	%Título do Relatório
 	
@@ -55,3 +126,5 @@
 	
 	
 \end{document}
+=======
+>>>>>>> 5ee3f750a83bb53684119e47f3bbd21fe8fbb308
