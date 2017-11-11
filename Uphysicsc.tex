@@ -15,8 +15,8 @@
 \usepackage{siunitx}
 
 \pagestyle{fancy}
-\lhead{
-\textsf{Team 891}}
+\lhead{\textsf{Solar Sailing from Earth to Mars}}
+\rhead{\textsf{Team 891}}
 \cfoot{\thepage{} of \pageref*{LastPage}}
 
 \setlength{\columnsep}{1.5cm}
@@ -93,13 +93,30 @@ We can do the same with the acceleration due to gravity and we find
   a(r) = a_G \dfrac{r_0^2}{r^2} = \dfrac{G M_s}{r_0^2} \dfrac{r_0^2}{r^2}
 \end{equation}
 With this in mind we can then rewrite \autoref{eq:equations of motion perpendicular} as follows
-\begin{align}
+\begin{align} \label{eq:equations of motion characteristic accelerations}
   \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R - a_G) \left(\dfrac{r_0}{r}\right)^2 \\
 	\dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= 0
 \end{align}
 As we have already mentioned, this shows that the motion of a solar sail receiving radiation orthogonal to itself is governed by an inverse square law. In particular, the sail will move as if it were orbiting a star with a mass less than the Sun.
 
-This, however, is only true if the sail is orthogonal to the incoming radiation. Indeed, if we allow for the sail to be at an arbitrary orientation, then its tangential acceleration is no longer zero. For this, we introduce the angle \( \alpha \), which is the angle between the vector normal to the sail, \( \hat{\mathbf{n}} \), and the radial direction.  
+This, however, is only true if the sail is orthogonal to the incoming radiation. Indeed, if we allow for the sail to be at an arbitrary orientation, then its tangential acceleration is no longer zero. For this, we introduce the angle \( \alpha \), which is the angle between the vector normal to the sail, \( \hat{\mathbf{n}} \), and the radial direction. Now, the force due to radiation pressure has two contributions. The incoming photons exert a force that is now proportional to the orthogonal projection of the sail onto the radial direction, therefore of \( IS\cos{\alpha}/c \). This force is in the radial direction. The emitted photons exert a force that has the same modulus, but given that the sail behaves like a mirror, they are emmited in the direction orthogonal to the radial direction, and so the force due to the outgoing radiation is proportional to \( {-\hat{\mathbf{e}}_{\theta}} \). So we have
+\begin{equation}
+  \mathbf{F}_R(r) = \dfrac{2IS \cos{\alpha}}{c} ( \hat{\mathbf{e}}_{r} - \hat{\mathbf{e}}_{\theta})
+\end{equation}
+We now observe that because of symmetry, the vector \( \hat{\mathbf{e}}_{r} - \hat{\mathbf{e}}_{\theta}  \) is proportional to \( \hat{\mathbf{n}} \), and, because \( \hat{\mathbf{n}} \) is a unit vector then we have \( \hat{\mathbf{e}}_{r} - \hat{\mathbf{e}}_{\theta} = \cos{\alpha} \hat{\mathbf{n}} \). 
+And thus we obtain
+\begin{align}
+  \mathbf{F}_R(r) &= \dfrac{2IS \cos^2{\alpha}}{c} \hat{\mathbf{n}} \\
+									&= \dfrac{2IS \cos^2{\alpha}}{c} (\cos{\alpha} \hat{\mathbf{e}}_r + \sin{\alpha} \hat{\mathbf{e}}_{\theta}) 
+\end{align}
+
+Finally, we can rewrite the equations of motion for a solar sail in this more general case as follows:
+\begin{align*}
+  \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2 \\ 
+  \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= -a_R	\sin{\alpha} \cos^2{\alpha} \left(\dfrac{r_0}{r}\right)^2
+\end{align*}
+As a consistency check,  we note that if \( \alpha = 0 \), that is, the sail is orthogonal to the radiation, we recover \autoref{eq:equations of motion characteristic accelerations}. However, the equations we have just obtained are \emph{not} the equations for a particle experiencing central force motion.   
+
 
 \end{document}
 
