@@ -66,8 +66,23 @@ The release of the space craft will be considered at the time in which the Earth
 
 The main goals of the article are to discuss a suitable distribuiton of the mass of the space craft, as well as to simulate possible trajectories and the arrival of the sail to Mars.
 
+<<<<<<< HEAD
+\subsection{Main assumptions}
+To model the motion of a solar sail, we assumed it to be subject solely to the gravitational attraction from the Sun and solar radiation pressure. This yields a meaningful first approximation which can be used to gain insight on 
+
+Throughout the article, several assumptions have been made, both as interpretations of the problem and in order to facilitate the model. However, all assumptions are supported by literature, and all the approximations were found to be reasonable. We present the approximations and interpretations made.
+
+\begin{itemize}
+\item The orbits of Mars and the Earth are coplanar and perfectly circular.
+\item The only forces acting on the sail during its flight are the gravitational force exerted by the Sun and the thrust given by the inciding photons. Since the initial radial velocity is the Earth escape velocity, it is reasonable not to consider its attraction. In a first approach to the model, Mars attraction force has not been computed.
+\item As stated in the problem given, we assume the total mass of the space craft is \SI{2 000}{kg} , including the payload and the sail. Thus, our goal is to maximize the payload while still finding a reasonable time of flight. 
+\item Comparing the research which has already been done to the fact that the preassure exerted by light is twice its energy density, one finds that the case given is one of a perfect reflection.
+\item We assume the only initial radial velocity of the sail is the Earth's linear velocity. Thus, one ignores the effects of the Earth's rotation.
+\end{itemize}
+=======
 \subsection{General assumptions}
 When one considers the general model of a solar sail orbiting the Sun, one finds that the acceleration of the center of mass of the sail-Sun system is non-vanishing, and therefore, taking the center of mass as the origin of the reference frame, as we do in subsequent calculations, does not yield an inertial frame. However, this acceleration is negligible and so we use the approximation that the acceleration of the center of mass of the Sun-sail system ---which can in turn be approximated by the Sun's position--- is zero.
+>>>>>>> 9bd00f5e3e416f53885186f59c0fccab10b7cb2e
 
 Furthermore, for this model to be applicable, the orbits of the Earth and Mars must be assumed circular and coplanar, and the sail is assumed to remain perpendicular to the plane of the orbits.
 
@@ -182,9 +197,21 @@ With a total available mass of \SI{2000}{kg}, a manned mission propelled with a 
 	\label{fig:logarithmic spiral}
 \end{figure}
 
+However it is not enough to ensure a change of orbit, Mars position must be determined in order to desing an hypothetical landing. Some values regarding speed of the craft and its relative position to Mars are given to discuss this. Equations of motion can be solved according \cite{mcinnes} -page 155- where a explicit solution for $r(\theta)$ can be found. Having this, one finds that it takes around $4.7$ rad to perform the orbit change. Even so, this does not guarantee an encounter with Mars as by assuming its velocity to be constant its final position can be calculated. Considering the flight time, the angle between the radius vectors that define its initial and final position turns out to be $3.6$ rad. This is not an extremely accurate estimation as a perfect cirular orbit of Mars has been suposed.
+
+ As a consequence, different options can be thought in order to solve this. The first one may consist in modifying the followed path by finding a secondary thrust source though attending to allowed payload this does not seem viable. On the other hand, a different initial condition could be considered in order to compensate the final angle difference between the craft and Mars. This will consist in launching the solar sail not at the closest approach to Mars but with an initial phase difference so that an encounter can be guaranteed. Nevertheless, this idea will not be developed in the survey as a better performance with this initial conditions is assessed in the following sections.
+ 
+ Notwithstanding, thinking about using a different flight time suggests a better option. Taking the optimal sail pitch angle implies a fixed value of the flight time which in fact, is the minimal one. However, a greater time may be used in order to achieve a better approach to Mars.
 \section{No sé quin títol}
 \subsection{First simulation?}
 Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
+
+Solutions of equations \ref{carlessexy} and \ref{carlessexy2} have been simulated. Figure ?? shows the trajectory followed by the sail. It is direct that it is still a spiral, but not a logaritmic one as in Figure \ref{espiral}. Note that the trajectory of the sail is not tangent anymore to the orbit of Mars.
+
+The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Without considering the gravitational pull exerted by Mars, and approximating both curves to tangent, the relative velocity between both bodies is $-4$km/s, meaning Mars, which is behind the sail, reaches the spacecraft at a speed of $4$km/s.
+
+Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig: first}.
+
 
 \begin{figure}[h]
 	\centering
