@@ -82,7 +82,8 @@ Throughout the article, several assumptions have been made, both as interpretati
 =======
 \subsection{General assumptions}
 When one considers the general model of a solar sail orbiting the Sun, one finds that the acceleration of the center of mass of the sail-Sun system is non-vanishing, and therefore, taking the center of mass as the origin of the reference frame, as we do in subsequent calculations, does not yield an inertial frame. However, this acceleration is negligible and so we use the approximation that the acceleration of the center of mass of the Sun-sail system ---which can in turn be approximated by the Sun's position--- is zero.
->>>>>>> 9bd00f5e3e416f53885186f59c0fccab10b7cb2e
+
+
 
 Furthermore, for this model to be applicable, the orbits of the Earth and Mars must be assumed circular and coplanar, and the sail is assumed to remain perpendicular to the plane of the orbits.
 
@@ -180,27 +181,32 @@ Of course, there is no sail mass which produces an optimum time, since allotting
 \begin{figure}[h] 
 	\centering
 	\includegraphics[scale=0.35]{time}
-	\caption{Decrease of the flight time as a function of thet  solar sail mass}
+	\caption{Flight time as a function of the sail mass}
 	\label{fig:time of flight}
 \end{figure}
 
 With a total available mass of \SI{2000}{kg}, a manned mission propelled with a solar sail is obviously not possible. The purpose of a solar sail would then be to send unmanned cargo to Mars, possibly satellites or rovers to explore its surface. According to \cite{presskit}, the Mars Science Lab (MSL) mission, which sent the rover Curiosity to Mars, had a total mass of \SI{3893}{kg}. The rover itself, however had a mass of \SI{899}{kg}, and most of the remaining mass of the mission was destined to propulsion systems. Given that a hypothetical solar sail propelled mission would have no need for fuel tanks or propulsion systems, it seems reasonable that a payload mass of \SI{1000}{kg} would suffice to carry a rover or similar device to Mars. This would leave another \SI{1000}{kg} to be used for a sail of area \SI{142857}{m^2}. As such, the total time to travel to Mars in these conditions is of approximately 390 days. Again, comparing with a mission such as MSL, which took 254 days to reach Mars, we find that this time is higher, but the potentials savings in fuel and propulsion would possibly make up for it. Therefore we conclude that solar sailing is a viable means of sending small cargo to Mars. 
-
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{espiral.png}
-	\label{espiral}
 	\caption{First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axis in AU.}
 	\label{fig:logarithmic spiral}
 \end{figure}
+
 \subsection{Intercepting Mars}
 However it is not enough to ensure a change of orbit, Mars position must be determined in order to desing an hypothetical landing. Some values regarding speed of the craft and its relative position to Mars are given to discuss this. Equations of motion can be solved according \cite{mcinnes} -page 155- where a explicit solution for $r(\theta)$ can be found. Having this, one finds that it takes around $4.7$ rad to perform the orbit change. Even so, this does not guarantee an encounter with Mars as by assuming its velocity to be constant its final position can be calculated. Considering the flight time, the angle between the radius vectors that define its initial and final position turns out to be $3.6$ rad. This is not an extremely accurate estimation as a perfect cirular orbit of Mars has been suposed.
+=======
+
+However it is not enough to ensure a change of orbit, Mars position must be determined in order to desing an hypothetical landing. Some values regarding speed of the craft and its relative position to Mars are given to discuss this. Equations of motion can be solved according \cite[p.~155]{mcinnes} where a explicit solution for $r(\theta)$ can be found. Having this, one finds that it takes around $4.7$ rad to perform the orbit change. Even so, this does not guarantee an encounter with Mars as by assuming its velocity to be constant its final position can be calculated. Considering the flight time, the angle between the radius vectors that define its initial and final position turns out to be $3.6$ rad. This is not an extremely accurate estimation as a perfect cirular orbit of Mars has been suposed.
+>>>>>>> 3a868df1e0014b08a1b27dbe8948fe04ca8dc624
 
 As a consequence, different options can be thought in order to solve this. The first one may consist in modifying the followed path by finding a secondary thrust source though attending to allowed payload this does not seem viable. On the other hand, a different initial condition could be considered in order to compensate the final angle difference between the craft and Mars. This will consist in launching the solar sail not at the closest approach to Mars but with an initial phase difference so that an encounter can be guaranteed. Nevertheless, this idea will not be developed in the survey as a better performance with this initial conditions is assessed in the following sections.
  
 Notwithstanding, thinking about using a different flight time suggests a better option. Taking the optimal sail pitch angle implies a fixed value of the flight time which in fact, is the minimal one. However, a greater time may be used in order to achieve a better approach to Mars.
 \section{No sé quin títol}
 \subsection{First simulation?}
+Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
+
 Solutions of equations \ref{carlessexy} and \ref{carlessexy2} have been simulated. Figure ?? shows the trajectory followed by the sail. It is direct that it is still a spiral, but not a logaritmic one as in Figure \ref{espiral}. Note that the trajectory of the sail is not tangent anymore to the orbit of Mars.
 
 The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Without considering the gravitational pull exerted by Mars, and approximating both curves to tangent, the relative velocity between both bodies is $-4$km/s, meaning Mars, which is behind the sail, reaches the spacecraft at a speed of $4$km/s.
@@ -208,13 +214,28 @@ The simulation also allows us to find a first approximation of the velocity with
 Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig: first}.
 
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{simu.png}
 	\caption{\small Simulation of the trajectory of the sail. The Sun is at the origin and axes are in AU. The blue squared represents the sail when reaching Mars' orbit, and the red square Mars at this same time}
 	\label{fig:simu}
 \end{figure}
+<<<<<<< HEAD
 As it can be seen in \autoref{fig:simu},  
+=======
+ 
+The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained arguing the sole effect of the escape velocity the sail has is that of counteracting Earth's pull.
+
+\begin{figure*}
+	\centering
+	\includegraphics[scale=0.7]{simulacionsvaries.png}
+	\label{espirals}
+	\caption{Simulation of sail trajectories for different sail angles, $\alpha$, in radians. T indicates the time of flight, in days. The green orbit is Earth's, and the red one is Mars'. The blue square indicates the intersection between Mars' orbit and the trajectory of the space craft, and the red square indicates the position of Mars at this exact time. }
+	\label{fig:espirals}
+\end{figure*}
+
+
+>>>>>>> 3a868df1e0014b08a1b27dbe8948fe04ca8dc624
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
 
