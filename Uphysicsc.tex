@@ -204,6 +204,8 @@ As a consequence, different options can be thought in order to solve this. The f
  Notwithstanding, thinking about using a different flight time suggests a better option. Taking the optimal sail pitch angle implies a fixed value of the flight time which in fact, is the minimal one. However, a greater time may be used in order to achieve a better approach to Mars.
 \section{No sé quin títol}
 \subsection{First simulation?}
+Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
+
 Solutions of equations \ref{carlessexy} and \ref{carlessexy2} have been simulated. Figure ?? shows the trajectory followed by the sail. It is direct that it is still a spiral, but not a logaritmic one as in Figure \ref{espiral}. Note that the trajectory of the sail is not tangent anymore to the orbit of Mars.
 
 The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Without considering the gravitational pull exerted by Mars, and approximating both curves to tangent, the relative velocity between both bodies is $-4$km/s, meaning Mars, which is behind the sail, reaches the spacecraft at a speed of $4$km/s.
@@ -218,7 +220,16 @@ Solutions of equations \ref{eq:equations of motion general case} and 2.14 have b
 	\label{fig:simu}
 \end{figure}
  
-As it can be seen in \autoref{fig:simu},  
+The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained 
+
+\begin{figure*}
+	\centering
+	\includegraphics[scale=0.7]{simulacionsvaries.png}
+	\label{espirals}
+	\caption{Sail trajectories for different sail angles, $\alpha$, in radians. T indicates the time of flight, in days. The green orbit is Earth's, and the red one is Mars'. The blue square indicates the intersection between Mars' orbit and the trajectory of the space craft, and the red square indicates the position of Mars at this exact time. }
+	\label{fig:espirals}
+\end{figure*}
+
 
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
