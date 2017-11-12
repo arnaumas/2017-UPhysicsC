@@ -72,7 +72,7 @@ Throughout the article, several assumptions have been made, both as interpretati
 
 \begin{itemize}
 \item The orbits of Mars and the Earth are coplanar and perfectly circular.
-\item The only forces acting on the sail during its flight are the gravitational force exerted by the Sun and the thrust given by the inciding photons. Since the initial radial velocity is the Earth escape velocity, it is reasonable not to consider its attraction. However, Mars gravitational pull has been taken into account when calculating the arriving velocity.
+\item The only forces acting on the sail during its flight are the gravitational force exerted by the Sun and the thrust given by the inciding photons. Since the initial radial velocity is the Earth escape velocity, it is reasonable not to consider its attraction. In a first approach to the model, Mars attraction force has not been computed.
 \item As stated in the problem given, we assume the total mass of the space craft is \SI{2 000}{kg} , including the payload and the sail. Thus, our goal is to maximize the payload while still finding a reasonable time of flight. 
 \item Comparing the research which has already been done to the fact that the preassure exerted by light is twice its energy density, one finds that the case given is one of a perfect reflection.
 \item We assume the only initial radial velocity of the sail is the Earth's linear velocity. Thus, one ignores the effects of the Earth's rotation.
@@ -210,6 +210,11 @@ One must now decide on a formula which will have both a reasonable time of trave
 
 Choosing to distribute equally the mass of the sail and the mass of the sail, one gets a value for the solar sail lightness of $\beta=0.1088$. From now on, this value will be assumed to be equal to 0.1, since most of the other characteristics can be found in literature for such value.
 
+However it is not enough to ensure a change of orbit, Mars position must be determined in order to desing an hypothetical landing. Some values regarding speed of the craft and its relative position to Mars are given to discuss this. Equations of motion can be solved according \cite{mcinnes} -page 155- where a explicit solution for $r(\theta)$ can be found. Having this, one finds that it takes around $4.7$ rad to perform the orbit change. Even so, this does not guarantee an encounter with Mars as by assuming its velocity to be constant its final position can be calculated. Considering the flight time, the angle between the radius vectors that define its initial and final position turns out to be $3.6$ rad. This is not an extremely accurate estimation as a perfect cirular orbit of Mars has been suposed.
+
+ As a consequence, different options can be thought in order to solve this. The first one may consist in modifying the followed path by finding a secondary thrust source though attending to allowed payload this does not seem viable. On the other hand, a different initial condition could be considered in order to compensate the final angle difference between the craft and Mars. This will consist in launching the solar sail not at the closest approach to Mars but with an initial phase difference so that an encounter can be guaranteed. Nevertheless, this idea will not be developed in the survey as a better performance with this initial conditions is assessed in the following sections.
+ 
+ Notwithstanding, thinking about using a different flight time suggests a better option. Taking the optimal sail pitch angle implies a fixed value of the flight time which in fact, is the minimal one. However, a greater time may be used in order to achieve a better approach to Mars.
 \section{No sé quin títol}
 \subsection{First simulation?}
 Solutions of equations \ref{carlessexy} and \ref{carlessexy2} have been simulated. Figure ?? shows the trajectory followed by the sail. It is direct that it is still a spiral, but not a logaritmic one as in Figure \ref{espiral}. Note that the trajectory of the sail is not tangent anymore to the orbit of Mars.
