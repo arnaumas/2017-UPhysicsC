@@ -230,7 +230,22 @@ Assuming the trajectories of Mars and the space craft to be tangential in the fi
 	\label{fig:espirals}
 \end{figure}
 \subsection{Sail steering}
-In the last section it has been shown that it is quite hard to arrive at Mars orbit at a close position to the planet. This raise some issues regarding not only the possibility of encounter with Mars but also whether craft speed is safe enough or not. The idea is further on given consists in trying to stabilize the solar sail at Mars orbit. Being succesful with this would implie a similar velocity to Mars orbital one, and moreover, the guarantee of finding the planet since phase difference can be corrected as explained in Section 3.1.2.
+In the last section it has been shown that it is quite hard to arrive to Mars orbit at a close position to the planet. This raises some issues regarding not only the possibility of encountering Mars but also whether craft speed is safe enough or not. The idea that is given in the section consists in trying to stabilize the solar sail at Mars orbit. Being succesful with this would implie a similar velocity to Mars orbital one, and moreover, the guarantee of finding the planet since phase difference can be corrected by changing launching positions as explained in Section 3.1.2. 
+\begin{figure}
+	\centering
+	\label{fig:maniobres}
+	\includegraphics[scale=0.4]{Maniobres.png}
+	\caption{Trajectory of the sail with the manoeuvres required to stabilize the orbit, yellow dots. Spacecraft as a blue square in the moment of crossing Mars orbit for the first time. Axes in AU.}
+\end{figure}
+
+This will be ensured by making $\alpha$, which determines the force acting on the sail, a function of time. An ideal model would consider this $\alpha(t)$ as a continous function of time and this can be done using similar methods to those used in \cite{xinos}. Nevertheless, due to the complexity of simulations, in this survey it is shown $\alpha$ as a function which is constant in different intervals of time. As a consequence, the model suggests that making an approach to Mars orbit is possible with few manoeuvres, this is, with few changes of $\alpha$. Obviously, one must not forget that the orbit achieved is not the same as Mars one, but it is actually really close. Notice, moreover, that the last manoeuvre sets $\alpha=0$ something which will imply a resulting force characteristic of a central force, a bit different of the gravitational one because of the sun light orthogonal incidence. Calculations give a really close proximity between Mars and the craft within 5 years since the launching moment with initial conditions, and a relative speed of $2$km/s, something that will ensure a safe landing. Even though, the aim of this approach was not to landing Mars but to orbiting like it, since, changing initial positions in real life would assure the desired landing.
+
+Furthermore, it is required to know $\alpha(t)$ in order to design the flight plan represented in \autoref{fig:maniobres}. This is shown in \autoref{fig:escaleta}. Data of this manoeuvres is inspired once again in \cite{xinos}.
+\begin{figure}
+	\label{fig:escaleta}
+	\includegraphics[scale=0.35]{cocu.png}
+	\caption{dncsdkn}
+\end{figure}
 \clearpage
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
