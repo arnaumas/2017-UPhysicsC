@@ -29,6 +29,7 @@
 \author{\textsf{Team 891}}
 \title{\textsf{\textbf{Problem A: Solar Sailing from Earth to Mars}}}
 \date{\textsf{November 12, 2017}}
+\makeindex
 
 \begin{document}
 \renewcommand{\abstractname}{}
@@ -46,7 +47,10 @@ Test test test
 \end{titlingpage}
 
 \clearpage
-
+\begin{titlingpage}
+\tableofcontents
+\end{titlingpage}
+\clearpage
 \section{Introduction}
 
 \subsection{Approach}
@@ -194,40 +198,41 @@ Of course, there is no sail mass which produces an optimum time, since allotting
 
 With a total available mass of \SI{2000}{kg}, a manned mission propelled with a solar sail is obviously not possible. The purpose of a solar sail would then be to send unmanned cargo to Mars, possibly satellites or rovers to explore its surface. According to \cite{presskit}, the Mars Science Lab (MSL) mission, which sent the rover Curiosity to Mars, had a total mass of \SI{3893}{kg}. The rover itself, however had a mass of \SI{899}{kg}, and most of the remaining mass of the mission was destined to propulsion systems. Given that a hypothetical solar sail propelled mission would have no need for fuel tanks or propulsion systems, it seems reasonable that a payload mass of \SI{1000}{kg} would suffice to carry a rover or similar device to Mars. This would leave another \SI{1000}{kg} to be used for a sail of area \SI{142857}{m^2}. As such, the total time to travel to Mars in these conditions is of approximately 390 days. Again, comparing with a mission such as MSL, which took 254 days to reach Mars, we find that this time is higher, but the potentials savings in fuel and propulsion would possibly make up for it. Therefore we conclude that solar sailing is a viable means of sending small cargo to Mars. 
 
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.5]{espiral.png}
-	\caption{First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axis in AU.}
-	\label{fig:logarithmic spiral}
-\end{figure}
-
-
 \subsection{Intercepting Mars}
 
-Thus far we have found it would take the sail to complete the change of orbit. However, if our goal is for the payload to arrive at Mars, then the sail should intercept Mars' orbit at a time when Mars' position is close enough to capture the sail. Considering the simplified equations of motion, the equation for the orbit, \( r(\theta \), is found to be exponential in \( \theta \) (\cite[p. 155]{mcinnes}). Then, the angle at which the sail intersects the orbit of Mars can be found ---having taken \( \theta = 0	\) to be the Mars-Earth close approah---. Its value is around \SI{4.7}{rad}. We can then compute the position of Mars at this instant, given that we have assumed it is following its orbit in uniform circular motion. This position is at \( \theta = \SI{3.6}{rad} \), and thus an encounter does not take place in this conditions.
+Thus far we have found the time it would take for the sail to complete the change of orbit. However, if our goal is for the payload to arrive at Mars, then the sail should intercept Mars' orbit at a time when Mars' position is close enough to capture the sail. Considering the simplified equations of motion, the equation for the orbit, \( r(\theta \), is found to be exponential in \( \theta \) (\cite[p. 155]{mcinnes}). Then, the angle at which the sail intersects the orbit of Mars can be found ---having taken \( \theta = 0	\) to be the Mars-Earth close approach---. Its value is around \SI{4.7}{rad}. We can then compute the position of Mars at this instant, given that we have assumed it is following its orbit in uniform circular motion. This position is at \( \theta = \SI{3.6}{rad} \), and thus an encounter does not take place in this conditions.
 
+We see then that in the conditions of the problem statement, it is not possible to plot a course for Mars with the optimal sail angle. To remedy this it might be possible to course correct with a secondary thrust source, but given the restriction on the total mass of the craft, this is not an option. Alternatively, we might consider a different initial position, but again, the initial position is a requirement of the problem.
+
+The approach followed will be to sacrifice a minimal time for a guaranteed encounter of the sail with Mars.
 
 As a consequence, different options can be thought in order to solve this. The first one may consist in modifying the followed path by finding a secondary thrust source though attending to allowed payload this does not seem viable. On the other hand, a different initial condition could be considered in order to compensate the final angle difference between the craft and Mars. This will consist in launching the solar sail not at the closest approach to Mars but with an initial phase difference so that an encounter can be guaranteed. Nevertheless, this idea will not be developed in the survey as a better performance with this initial conditions is assessed in the following sections.
  
 Notwithstanding, thinking about using a different flight time suggests what at first sight could seem a better option. Taking the optimal sail pitch angle implies a fixed value of the flight time which in fact, is the minimal one. However, a greater time may be used in order to achieve a better approach to Mars. Computing this, it is found that there is not $\alpha$ so that final angles of Mars and the craft are the same. On the other hand, looking for the best initial angle one obtains that making $\alpha=0.557$rad implies a minimal difference between these two angles. However, this is rather similar to the optimal sail pitch angle and hence, the two angles will still vary on a value close to 1rad, which does not make a significant difference. Further on it is shown that using this same strategy could have a grat impact at the time of designing an optimal flight plan.
 
 Once different options to approach Mars have been considered it is necessary to estimate the arrival conditions inasmuch as an excessive relative velocity between Mars and the craft may trigger an unsafe landing. 
-\section{No sé quin títol}
-\subsection{First simulation?}
+
+\section{Results}
+\subsection{Final model. Simulations}
 Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
 
-The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Without considering the gravitational pull exerted by Mars, and approximating both curves to tangent, the relative velocity between both bodies is $-4$km/s, meaning Mars, which is behind the sail, reaches the spacecraft at a speed of $4$km/s.
+The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained arguing the sole effect of the escape velocity the sail has is that of counteracting Earth's pull.
 
-Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig: first}.
+The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Considering both trajectories tangential, which, as seen in the Figure, is feasible, the sail's relative velocity to Mars is \SI{-8,5}{km\cdot s^{-1}} at the intersection of both trajectories.
 
+However, as pointed in Section 3.2, the sail reaches Mars orbit when the planet is to far for the space craft to land or start orbiting it. The simulation does not take into account Mars' gravitational pull, but research points it is not strong enough to change this situation.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{simu.png}
-	\caption{\small Simulation of the trajectory of the sail. The Sun is at the origin and axes are in AU. The blue squared represents the sail when reaching Mars' orbit, and the red square Mars at this same time}
+	\caption{\small Simulation of the trajectory of the sail. The Sun is at the origin and axes are in AU. The blue squared represents the sail when reaching Mars' orbit, and the red square, Mars at this same time.}
 	\label{fig:simu}
+
 \end{figure} 
 The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained arguing the sole effect of the escape velocity the sail has is that of counteracting Earth's pull.
+
+
+In a first attempt of reaching Mars from the initial proposed configuration and without a need of manouvers, simulations have been run in order to find a proper 
 
 \begin{figure}
 	\centering
@@ -238,6 +243,9 @@ The simulation in  \autoref{fig:simu} has been run under the assumption that the
 	\caption{Simulation of sail trajectories for different sail angles, $\alpha$, in radians. T indicates the time of flight, in days. The green orbit is Earth's, and the red one is Mars'. The blue square indicates the intersection between Mars' orbit and the trajectory of the space craft, and the red square indicates the position of Mars at this exact time. }
 	\label{fig:espirals}
 \end{figure}
+
+
+\clearpage
 
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
