@@ -199,8 +199,8 @@ We see then that in the conditions of the problem statement, it is not possible 
 
 All of this leads us to believe that there is not much else that can be done to improve the characteristics of the voyage in these conditions. In the next two sections we will explore two different methods to improve on the characteristics of the mission.
 
-\subsection{Final model. Simulations}
-Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been obtained numerically. The code used for the simulation is attached in the Appendix and consists of a numerical solution of the differential equations considered. This way, one can plot the trajectory of the sail under this conditions, and determine different parameters along it.
+\subsection{Numerical solution of the general equations of motion}
+Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been obtained numerically. The code used for the simulation is attached in the Appendix and consists of a numerical solution of the differential equations considered. One transforms the set of two 2nd order differential equations into a set of four of 1st order, by defining $v_r=\dot{r}$ and $v_\theta=r\cdot\dot{\theta}$. Then, it is possible to numerically solve the system, and one gets four dimensional arrays whose entries are values for $r$, $\theta$, $v_r$ and $v_\theta$ at one certain time. The collection of this arrays approximates four functions which satisfy the set of equations. This data can then be plotted as the trajectory of the sail under this conditions, and determine different parameters along it.
 
  \autoref{fig:optimal angle simulation} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
 
