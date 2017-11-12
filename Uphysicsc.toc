@@ -12,4 +12,5 @@
 \contentsline {subsubsection}{\numberline {3.1.1}Feasibility of the trip}{4}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Intercepting Mars}{6}{subsubsection.3.1.2}
 \contentsline {subsection}{\numberline {3.2}Final model. Simulations}{7}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Optimisation to enter Mars orbit}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Sail steering}{8}{subsection.3.3}
+\contentsline {section}{\numberline {A}Python code for numerical solution}{10}{appendix.A}
