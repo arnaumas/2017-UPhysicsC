@@ -10,3 +10,6 @@ https://smartech.gatech.edu/bitstream/handle/1853/14747/HumanMarsMissionTrajecto
 http://sci-hub.cc/10.1177/0954410012465244
 https://sci-hub.cc/https://doi.org/10.2514/8.4791 t tsu
 http://ccar.colorado.edu/ASEN5050/projects/projects_2016/DeLuca_Michael/applications.html Canvi d'òrbita
+
+
+http://ieeexplore.ieee.org/document/5572516/?reload=true CARLEEEES
