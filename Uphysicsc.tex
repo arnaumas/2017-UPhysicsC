@@ -1,10 +1,9 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[twocolumn,12pt,a4paper]{article}
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{multicol}
-\usepackage{url}
 \usepackage[top=3cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry}
 \usepackage[bookmarks=true,bookmarksnumbered=true,hidelinks]{hyperref}
 \usepackage{fancyhdr,lastpage}
@@ -47,12 +46,11 @@ Test test test
 
 \end{titlingpage}
 
+\clearpage
 \begin{titlingpage}
 \tableofcontents
 \end{titlingpage}
-
-\begin{multicols}{2}
-
+\clearpage
 \section{Introduction}
 
 \subsection{Approach}
@@ -258,11 +256,7 @@ Assuming the trajectories of Mars and the space craft to be tangential in the fi
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
 
-\end{multicols}
-
-\appendix
-\section{Python code for the numerical solution}
-
+\section*{Appendix}
 \begin{minted}{python}
 	#Simulation of the sail trajectory
 	
