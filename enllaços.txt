@@ -13,3 +13,5 @@ http://ccar.colorado.edu/ASEN5050/projects/projects_2016/DeLuca_Michael/applicat
 
 
 http://ieeexplore.ieee.org/document/5572516/?reload=true CARLEEEES
+http://sci-hub.cc/10.2514/3.11428	Totxo
+https://www.codeproject.com/Tips/792927/Fourth-Order-Runge-Kutta-Method-in-Python. 
