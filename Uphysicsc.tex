@@ -15,6 +15,7 @@
 \usepackage{abstract}
 \usepackage{amsmath}
 \usepackage{siunitx, minted}
+\usepackage{bibtopic}
 
 \pagestyle{fancy}
 \lhead{\textsf{Solar Sailing from Earth to Mars}}
@@ -115,13 +116,13 @@ We can do the same with the acceleration due to gravity and we find
   a(r) = a_G \dfrac{r_0^2}{r^2} = \dfrac{G M_s}{r_0^2} \dfrac{r_0^2}{r^2}
 \end{equation}
 With this in mind we can then rewrite \autoref{eq:equations of motion perpendicular} as follows
-\begin{align} \label{eq:equations of motion characteristic accelerations}
-  \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R - a_G) \left(\dfrac{r_0}{r}\right)^2 \\
-	\dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= 0
-\end{align}
+\begin{equation} \label{eq:equations of motion characteristic accelerations}
+  \dot{v}_r - \dfrac{v_{\theta}^2}{r} = (a_R - a_G) \left(\dfrac{r_0}{r}\right)^2 
+\end{equation}
 As we have already mentioned, this shows that the motion of a solar sail receiving radiation orthogonal to itself is governed by an inverse square law. In particular, the sail will move as if it were orbiting a star with a mass less than the Sun.
 
 \subsection{Equations of motion for a solar sail: general case}
+<<<<<<< Updated upstream
 
 \begin{figure}
 	\centering
@@ -131,6 +132,9 @@ As we have already mentioned, this shows that the motion of a solar sail receivi
 \end{figure}
 
 This, however, is only true if the sail is orthogonal to the incoming radiation. Indeed, if we allow for the sail to be at an arbitrary orientation, then its tangential acceleration is no longer zero. For this, we introduce the angle \( \alpha \), which is the angle between the vector normal to the sail, \( \hat{\mathbf{n}} \), and the radial direction, as seen in Figure \ref{alpha}. We do not allow for full freedom of the sail, and assume that its normal vector remains in the plane that contains the radial vector and is orthogonal to the sail itself. Now, the force due to radiation pressure has two contributions. The incoming photons exert a force that is now proportional to the orthogonal projection of the sail onto the radial direction, therefore of \( IS\cos{\alpha}/c \). This force is in the radial direction. The emitted photons exert a force that has the same modulus, but given that the sail behaves like a mirror, they are emmited in the direction orthogonal to the radial direction, and so the force due to the outgoing radiation is proportional to \( {-\hat{\mathbf{e}}_{\theta}} \). So we have
+=======
+\autoref{eq:equations of motion perpendicular} only applies if the sail is orthogonal to the incoming radiation. Indeed, if we allow for the sail to be at an arbitrary orientation, then its tangential acceleration is no longer zero. For this, we introduce the angle \( \alpha \), which is the angle between the vector normal to the sail, \( \hat{\mathbf{n}} \), and the radial direction. We do not allow for full freedom of the sail, and assume that its normal vector remains in the plane that contains the radial vector and is orthogonal to the sail itself. Now, the force due to radiation pressure has two contributions. The incoming photons exert a force that is now proportional to the orthogonal projection of the sail onto the radial direction, therefore of \( IS\cos{\alpha}/c \). This force is in the radial direction. The emitted photons exert a force that has the same modulus, but given that the sail behaves like a mirror, they are emmited in the direction orthogonal to the radial direction, and so the force due to the outgoing radiation is proportional to \( {-\hat{\mathbf{e}}_{\theta}} \). So we have
+>>>>>>> Stashed changes
 \begin{equation}
   \mathbf{F}_R(r) = \dfrac{2IS \cos{\alpha}}{c} ( \hat{\mathbf{e}}_{r} - \hat{\mathbf{e}}_{\theta})
 \end{equation}
@@ -146,7 +150,7 @@ Finally, we can rewrite the equations of motion for a solar sail in this more ge
   \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2 \\ 
   \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= -a_R	\sin{\alpha} \cos^2{\alpha} \left(\dfrac{r_0}{r}\right)^2
 \end{align}
-As a consistency check, we note that if \( \alpha = 0 \), that is, the sail is orthogonal to the radiation, we recover \autoref{eq:equations of motion characteristic accelerations}. However, the equations we have just obtained are \emph{not} the equations for a particle experiencing central force motion.   
+As a consistency check, we note that if \( \alpha = 0 \), that is, the sail is orthogonal to the radiation, we recover \autoref{eq:equations of motion characteristic accelerations} and Equation 2.4. However, the equations we have just obtained are \emph{not} the equations for a particle experiencing central force motion.   
 
 \section{Model analysis and results}
 \subsection{Feasibility of the trip} \label{sec:Feasibility of the trip}
@@ -161,18 +165,18 @@ Therefore, assuming that the orbits of Mars and the Earth are indeed coplanar, w
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{espiral.png}
-	\caption{First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axis in AU.}
+	\caption{First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axes in AU.}
 	\label{fig:logarithmic spiral}
 \end{figure}
 
-Given the data in the problem then \( a_G \) is completely determined and has a value of \SI{5,928e-3}{m \cdot s^{-2}}. The characteristic acceleration can be rewritten in terms of the mass of the sail, \( m_s \):
+The value \( a_G \) is independent of the characteristics of the sail, and it has a value of \SI{5,928e-3}{m \cdot s^{-2}}. The characteristic acceleration can be rewritten in terms of the mass of the sail, \( m_s \):
 \begin{align*}
   a_R &= \dfrac{2I_0}{c} \dfrac{S}{m} \\
   		&= \dfrac{2I_0}{c} \dfrac{m_s}{\sigma m}
 \end{align*}
 where \( \sigma \) is the surface density of the sail, as given in the problem. And so we find that \( a_R = \num{6,45e-7} m_s \) using the value for \( I_0 \) given in \cite{hollerman}.
 
-As for the sail angle \( \alpha \), by minimizing \autoref{eq:time of flight between orbits}, it can be seen that the optimum angle depends only on the ratio \( a_R / a_g \) which is commonly called the lightness parameter of the sail and denoted by \( \beta \) With the values obtained for the characteristic accelerations, the value for \( \beta \) is \( \num{e-4} m_s \). Nevertheless, for values of \( \beta \) up to 0.5, which is the range that is accessible in this situation given that \( m_s \) cannot exceed \SI{2000}{kg}, the optimum angle shows very litle variation from 35.26º, as can be seen in \autoref{fig:optimum angle}, which shows the value of the factor dependent on \( \alpha \) in \autoref{eq:time of flight between orbits}.
+As for the sail angle \( \alpha \), by minimizing \autoref{eq:time of flight between orbits}, it can be seen that the optimum angle depends only on the ratio \( a_R / a_g \) which is commonly called the lightness parameter of the sail and denoted by \( \beta \).  With the values obtained for the characteristic accelerations, the value for \( \beta \) is \( \num{e-4} m_s \). Nevertheless, for values of \( \beta \) up to 0.5, which is the range that is accessible in this situation given that \( m_s \) cannot exceed \SI{2000}{kg}, the optimum angle shows very litle variation from \SI{35.26}{\degree}, as can be seen in \autoref{fig:optimum angle}, which shows the value of the factor dependent on \( \alpha \) in \autoref{eq:time of flight between orbits}.
 
 \begin{figure} 
 	\centering
@@ -196,7 +200,18 @@ With a total available mass of \SI{2000}{kg}, a manned mission propelled with a 
 
 \subsection{Intercepting Mars}
 
-Thus far we have found the time it would take for the sail to complete the change of orbit. However, if our goal is for the payload to arrive at Mars, then the sail should intercept Mars' orbit at a time when Mars' position is close enough to capture the sail. Considering the simplified equations of motion, the equation for the orbit, \( r(\theta) \), is found to be exponential in \( \theta \) (\cite[p. 155]{mcinnes}). Then, the angle at which the sail intersects the orbit of Mars can be found ---having taken \( \theta = 0	\) to be the Mars-Earth close approach---. Its value is around \SI{4.7}{rad}. We can then compute the position of Mars at this instant, given that we have assumed it is following its orbit in uniform circular motion. This position is at \( \theta = \SI{3.6}{rad} \), and thus an encounter does not take place in these conditions. This can be seen in \autoref{fig:optimal angle simulation}.
+Thus far we have found the time it would take for the sail to complete the change of orbit. However, if our goal is for the payload to arrive at Mars, then the sail should intercept Mars' orbit at a time when Mars' position is close enough to capture the sail. Considering the simplified equations of motion, the equation for the orbit, \( r(\theta) \), is found to be exponential in \( \theta \) (\cite[p. 155]{mcinnes}). Then, the angle at which the sail intersects the orbit of Mars can be found ---taking \( \theta = 0	\) to be the Mars-Earth closest approach. Its value is around \SI{4.7}{rad}. We can then compute the position of Mars at this instant, given that we have assumed it is following its orbit in uniform circular motion. This position is at \( \theta = \SI{3.6}{rad} \), and thus an encounter does not take place in these conditions. 
+
+We see then that in the conditions of the problem statement, it is not possible to plot a course for Mars with the optimal sail angle. This, then begs the question whether it is possible to find a sail angle that leads to a sail-Mars encounter. To perform this calculation we integrate an expression for the angular velocity of the sail, in terms only of \( r \) and \( \alpha \) found in \cite[p. 156]{mcinnes}, which gives the angle at which the sail intercepts the orbit of Mars for a given \( \alpha \), \( \theta_s(\alpha) \). Furthermore, for a given sail angle we can determine the time it will take for the sail to reach the orbit of Mars. Thus, as Mars is moving in uniform circular motion, we also know the angle it will be at when the interception happens, \( \theta_M(\alpha) \). Thus, we are looking for the value of \( \alpha \) such that \( \theta_s(-a) = \theta_M(\alpha) \). This equation turns out to have no solution in these conditions. Furthermore, if we try to minimize the difference \( \theta_s - \theta_M \) we obtain an angle of about \SI{32}{\degree}, which is close to the optimal angle.
+
+All of this leads us to believe that there is not much else that can be done to improve the characteristics of the voyage in these conditions. In the next two sections we will explore two different methods to improve on the characteristics of the mission.
+
+\subsection{Numerical solution of the general equations of motion}
+jince the general equations for a solar sail (\autoref{eq:equations of motion general case}) could not be analitically determined, we resorted to numerical methods to understand the behavior of a solar sail without approximations. As is explained in \cite{tsu}, the approximation made in the two previous sections are reasonable, yet not without falt. In particular, \( \dot{v} \) can be up to \( 10 \% \) of the value of \( v_{\theta}^2/r \). Because of this, we deemed this more detailed analysis to be necessary. 
+
+To obtain the numerical solutions, odeint, a numerical ODE solver part of the SciPy.integrate module was employed. The system of two second order ODEs was transformed into a set of four first order ODEs, by considering the two additional relationships \( v_r = \dot{r} \) and \( v_{\theta} = r \dot{\theta} \). Given initial conditions, the software then returns values for the position and velocity for a finite set of discrete time steps. The orbit can then be reconstructed from this data if a sufficiently small time step is used.
+
+ \autoref{fig:optimal angle simulation} shows the trajectory followed by the sail when launched with the optimal angle, as established in Section 3.1, \( \alpha = \SI{35.21}{\degree} \). Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor is the trajectory is a logarithmic spiral.
 
 \begin{figure}
 	\centering
@@ -205,30 +220,17 @@ Thus far we have found the time it would take for the sail to complete the chang
 	\label{fig:optimal angle simulation}
 \end{figure}
 
-We see then that in the conditions of the problem statement, it is not possible to plot a course for Mars with the optimal sail angle. This, then begs the question whether it is possible to find a sail angle that leads to a sail-Mars encounter. To perform this calculation we integrate an expression for the angular velocity of the sail, in terms only of \( r \) and \( \alpha \) found in \cite[p. 156]{mcinnes}, which gives the angle at which the sail intercepts the orbit of Mars for a given \( \alpha \), \( \theta_s(\alpha) \). Furthermore, for a given sail angle we can determine the time it will take for the sail to reach the orbit of Mars. Thus, as Mars is moving in uniform circular motion, we also know the angle it will be at when the interception happens, \( \theta_M(\alpha) \). Thus, we are looking for the value of \( \alpha \) such that \( \theta_s(-a) = \theta_M(\alpha) \). This equation turns out to have no solution in these conditions. Furthermore, if we try to minimize the difference \( \theta_s - \theta_M \) we obtain an angle of about \SI{32}{º}, which is close to the optimum angle.
+The simulation in  \autoref{fig:optimal angle simulation} has been run under the assumption that the initial radial velocity of the sail is zero. This idea, supported by literature and flight plans of previous missions ---\cite{tsu} and \cite{xinos}--- can be explained arguing that the sole effect of being released at escape velocity has on the sail is counteracting the Earth's gravitational pull.
 
-All of this leads us to believe that there is not much else that can be done to improve the characteristics of the voyage in these conditions. In the next two sections we will explore two different methods to improve on the characteristics of the mission.
+The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Considering both trajectories tangential at the point of interception, which, as can be seen, is a reasonable assumption, the sail's relative velocity to Mars is \SI{-8,5}{km\cdot s^{-1}} at the time of arrival to orbit. Travel time is 248 days according to the simulation.
 
-\subsection{Numerical solution of the general equations of motion}
-Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been obtained numerically. The code used for the simulation is attached in the Appendix and consists of a numerical solution of the differential equations considered. One transforms the set of two 2nd order differential equations into a set of four of 1st order, by defining $v_r=\dot{r}$ and $v_\theta=r\cdot\dot{\theta}$. Then, it is possible to numerically solve the system, and one gets four dimensional arrays whose entries are values for $r$, $\theta$, $v_r$ and $v_\theta$ at one certain time. The collection of this arrays approximates four functions which satisfy the set of equations. This data can then be plotted as the trajectory of the sail under this conditions, and determine different parameters along it.
-
- \autoref{fig:optimal angle simulation} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
-
-The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained arguing the sole effect of the escape velocity the sail has is that of counteracting Earth's pull.
-
-The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Considering both trajectories tangential, which, as seen in the Figure, is feasible, the sail's relative velocity to Mars is \SI{-8,5}{km\cdot s^{-1}} at the intersection of both trajectories. Travel time is 248 days according to the simulation.
-
-However, as pointed in Section 3.2, the sail reaches Mars orbit when the planet is to far for the spacecraft to land or start orbiting it. The simulation does not take into account Mars' gravitational pull, but research points it is not strong enough to change this situation.
-
+However, as pointed out in Section 3.2, the sail never intercepts Mars itself. The simulation does not take into account Mars' gravitational pull, but a simple calculation of its strength relative to the Sun's shows that it is virtually zero for all of the orbit.
  
-The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained arguing the sole effect of the escape velocity the sail has is that of counteracting Earth's pull.
+The simulation in  \autoref{fig:optimal angle simulation} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained arguing the sole effect of the escape velocity the sail has is that of counteracting Earth's pull.
 
+In a first attempt of reaching Mars from the initial proposed configuration and without the use of adjusting maneuvers, various simulations have been run with various sail shift angles in order to find a proper sail angle and flight plan. \autoref{fig:espirals} shows some representative results of such simulations. As it has been mentioned before, gravitational pull from Mars has not been taken into account when running the simulations, since it is not strong enough to have any noticeable effects on the trajectory. As can be seen, in a number of these sample orbits, the sail virtually intercepts Mars. This, however, comes at a large cost in terms of time, since it does so in an almost two year period, as opposed to the 250 days it takes to reach the orbit of Mars in the optimal case.
 
-In a first attempt of reaching Mars from the initial proposed configuration and without a need of manouvers, simulations have been run in order to find a proper sail angle and flight plan. \autoref{fig:espirals} shows some representative results of such simulations. As it has been mentioned before, gravitational pull from Mars has not been taken into account when running the simulations, since it is thought not to be strong enough to have considerable effects on the trajectory. However, in trajectories passing close enough to the planet, as such presented in \autoref{fig:espirals}, the attractive force of gavity will eventually be important enough to take into account, which will, on the one hand, enable the spacecraft to reach the target, but will also affect on its relative velocity to in. In an attempt of approximating this velocity, we first simulate the relative speed between both bodies at the time plotted.
-
-Assuming the trajectories of Mars and the spacecraft to be tangential in the first three plots in Figure 5, as they are in good aproximation, one gets relative speeds of \SI{-8,5}{km\cdot s^{-1}}, \SI{-3.5}{km\cdot s^{-1}}  and \SI{-4.7}{km\cdot s^{-1}}, meaning the planet is reachisg the sail. As it has been said, this results do not consider Mars' pull,  but they are believed to be suitable for the start of a landing maneuver in the cases where the distance between both bodies allow it.
-
-
+Assuming the trajectories of Mars and the spacecraft are tangential in the first three plots in \autoref{fig:espirals} one gets relative speeds of \SI{-8,5}{km\cdot s^{-1}}, \SI{-3.5}{km\cdot s^{-1}}  and \SI{-4.7}{km\cdot s^{-1}}, which means the sail would reach Mars at a speed within the range for a safe landing.
 
 \begin{figure}
 	\centering
@@ -236,19 +238,21 @@ Assuming the trajectories of Mars and the spacecraft to be tangential in the fir
 	\includegraphics[scale=0.5]{simulacio2.png}
 	\includegraphics[scale=0.5]{simulacio3.png}
 	\includegraphics[scale=0.5]{simulacio4.png}
-	\caption{Simulation of sail trajectories for different sail angles, $\alpha$, in radians. T indicates the time of flight, in days. The green orbit is Earth's, and the red one is Mars'. The blue square indicates the intersection between Mars' orbit and the trajectory of the spacecraft, and the red square indicates the position of Mars at this exact time. Axes in AU.}
+	\caption{Simulation of sail trajectories for different sail angles, \( \alpha \) in radians. \( T \) indicates the time of flight, in days. The green orbit is Earth's, and the red one is Mars'. The blue and red dots indicate, respectively, the position of the sail and Mars at the time the sail intercepts the orbit of Mars. Axes in AU.}
 	\label{fig:espirals}
 \end{figure}
+
 \subsection{Sail steering}
-In the last section it has been shown that it is quite hard to arrive to Mars orbit at a close position to the planet. This raises some issues regarding not only the possibility of encountering Mars but also whether craft speed is safe enough or not. The idea that is given in the section consists in trying to stabilize the solar sail at Mars orbit. Being succesful with this would implie a similar velocity to Mars orbital one, and moreover, the guarantee of finding the planet since phase difference can be corrected by changing launching positions as explained in Section 3.1.2. 
+So far it has been seen that, in the required conditions, it is hard to plot a course that intercepts Mars and does so in a reasonable time.
+
 \begin{figure}
 	\centering
 	\label{fig:maniobres}
 	\includegraphics[scale=0.55]{Maniobres.png}
-	\caption{Trajectory of the sail with the manoeuvres required to stabilize the orbit, yellow dots. Spacecraft as a blue square in the moment of crossing Mars orbit for the first time. Axes in AU.}
+	\caption{Trajectory of the sail with the trajectory correcting maneuvres required to stabilize the orbis.The yellow dots show the places at which a sail angle shift takes place. The blue dot shows the sail at the time in intersects Mars' orbit. Axes in AU.}
 \end{figure}
 
-This will be ensured by making $\alpha$, which determines the force acting on the sail, a function of time. An ideal model would consider this $\alpha(t)$ as a continous function of time and this can be done using similar methods to those used in \cite{xinos}. Nevertheless, due to the complexity of simulations, in this survey it is shown $\alpha$ as a function which is constant in different intervals of time. As a consequence, the model suggests that making an approach to Mars orbit is possible with few manoeuvres, this is, with few changes of $\alpha$. Obviously, one must not forget that the orbit achieved is not the same as Mars one, but it is actually really close. Notice, moreover, that the last manoeuvre sets $\alpha=0$ something which will imply a resulting force characteristic of a central force, a bit different of the gravitational one because of the sun light orthogonal incidence. Calculations give a really close proximity between Mars and the craft within 5 years since the launching moment with initial conditions, and a relative speed of $2$km/s, something that will ensure a safe landing. Simulation also suggests another monoeuvre would be needed after some years of orbit if it was wanted to mantain it. Even though the aim of this approach was not to land on Mars but to orbit like it, since, changing initial positions in real life would assure the desired landing.
+A possible way to solve this problem would be to change the orientation of the sail as a means to correct the velocity and trajectory of the sail. In \cite{xinos} a time profile for the sail angle is determined given a set of initial conditions. The complexity of the methods was too high to be applied in this situation, however, the characteristics of the solar sail in \cite{xinos}  Obviously, one must not forget that the orbit achieved is not the same as Mars one, but it is actually really close. Notice, moreover, that the last manoeuvre sets $\alpha=0$ something which will imply a resulting force characteristic of a central force, a bit different of the gravitational one because of the sun light orthogonal incidence. Calculations give a really close proximity between Mars and the craft within 5 years since the launching moment with initial conditions, and a relative speed of $2$km/s, something that will ensure a safe landing. Simulation also suggests another monoeuvre would be needed after some years of orbit if it was wanted to mantain it. Even though the aim of this approach was not to land on Mars but to orbit like it, since, changing initial positions in real life would assure the desired landing.
 
 Furthermore, it is required to know $\alpha(t)$ in order to design the flight plan represented in \autoref{fig:maniobres}. This is shown in \autoref{fig:escaleta}. Data of this manoeuvres is inspired once again in \cite{xinos}.
 
@@ -288,8 +292,19 @@ On the other hand work done has also some points than in a certain way could be 
 	\item Analysis in Section 3.4 is not as accurate as the one made in consulted literature. Used data is partly based on uneducated guess and computed orbit is not the exact Mars' orbit.
 \end{itemize}
 \clearpage
-\bibliographystyle{ieeetr}
-\bibliography{UphysicscNotes}
+
+\begin{btSect}{UphysicscNotes}
+	\bibliographystyle{ieeetr}
+	\section*{References}	
+	\btPrintCited
+\end{btSect}
+
+\begin{btSect}{UphysicscNotes}
+	\bibliographystyle{ieeetr}
+	\section*{Further Reading}	
+	\btPrintNotCited
+\end{btSect}
+
 
 \onecolumn
 \appendix
