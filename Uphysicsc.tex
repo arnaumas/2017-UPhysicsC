@@ -14,7 +14,7 @@
 \usepackage{titling,graphicx}
 \usepackage{abstract}
 \usepackage{amsmath}
-\usepackage{siunitx}
+\usepackage{siunitx, minted}
 
 \pagestyle{fancy}
 \lhead{\textsf{Solar Sailing from Earth to Mars}}
@@ -252,6 +252,125 @@ Assuming the trajectories of Mars and the space craft to be tangential in the fi
 
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
+
+\section*{Appendix}
+\begin{minted}{python}
+	#Simulation of the sail trajectory
+	
+	import numpy as np
+	%matplotlib inline
+	import matplotlib.pyplot as plt
+	from scipy.integrate import odeint
+	
+	ar=0.000645
+	ag=0.0059288888
+	alpha=       #Free to change
+	a1=ar*np.cos(alpha)**3-ag
+	a2=ar*np.sin(alpha)*np.cos(alpha)**2
+	r0=1.5*10**11
+	theta0=0
+	u0=0
+	v0=np.sqrt(2*10**30*6.67*10**(-11)/(1.5*10**11))
+	
+	def simu(y,t):
+		r,theta,u,v=y
+		dydt=[u,v/r,a1*(r0/r)**2+v**2/r,a2*(r0/r)**2-u*v/r]
+		return dydt
+	
+	y0=[r0,theta0,u0,v0]
+	t=np.linspace(0,380*3600*24*5,100000)
+	sol=odeint(simu,y0,t)
+	
+	rsol=[]
+	thsol=[]
+	usol=[]
+	vsol=[]
+	for i in range (0,len(sol)):
+			rsol.append(sol[i][0])
+			thsol.append(sol[i][1])
+			usol.append(sol[i][2])
+			vsol.append(sol[i][3])
+		
+	time=[]      #Find time it reaches Mars' orbit
+	for i in range (30000,len(sol2)):
+			if rsol2[i]<=(2.27+0.1)*10**11 and rsol2[i]>=(2.27-0.1)*10**11:
+					time.append((i,rsol2[i]))
+	time
+	
+	a=t2[]  #Introduce manually time taken from above
+	
+	t2=np.linspace(0,a,100000)  #trajectory until Mars' orbit
+	sol2=odeint(simu2,y0,t2)
+	rsol2=[]
+	thsol2=[]
+	usol2=[]
+	vsol2=[]
+	for i in range (0,len(sol)):
+			rsol.append(sol[i][0])
+			thsol.append(sol[i][1])
+			usol.append(sol[i][2])
+			vsol.append(sol[i][3])
+	
+	
+	x=[]					#Hypothetical trajectory
+	y=[]
+	for i in range (0,len(sol)):
+			x.append(rsol[i]*np.cos(thsol[i])/(1.5*10**11))
+			y.append(rsol[i]*np.sin(thsol[i])/(1.5*10**11))
+	x2=[]				#Trajectort unil Mars' orbit
+	y2=[]
+	for i in range (0,len(sol2)):
+			x2.append(rsol2[i]*np.cos(thsol2[i])/(1.5*10**11))
+			y2.append(rsol2[i]*np.sin(thsol2[i])/(1.5*10**11))
+	
+	xmf=2.27*10**11*np.cos(1.088*10**(-7)*a)/(1.5*10**11)  #Position of Mars when reaching orbit
+	ymf=2.27*10**11*np.sin(1.088*10**(-7)*a)/(1.5*10**11)
+	
+	xnf=rsol[100000-1]*np.cos(thsol[100000-1])/(1.5*10**11)  #Position of sail when reaching orbit
+	ynf=rsol[100000-1]*np.sin(thsol[100000-1])/(1.5*10**11)
+	
+	def frange(start, end=None, inc=None):
+			if end == None:
+					end = start + 0.0
+					start = 0.0
+	
+			if inc == None:
+					inc = 1.0
+	
+		L = []
+		while 1:
+				next = start + len(L) * inc
+				if inc > 0 and next >= end:
+						break
+				elif inc < 0 and next <= end:
+						break
+				L.append(next)
+	
+		return L
+	
+	xm=[]   #Mars orbit
+	ym=[]
+	for i in frange(0,2*np.pi,0.01):
+			xm.append(2.27*10**11*np.cos(i)/(1.5*10**11))
+			ym.append(2.27*10**11*np.sin(i)/(1.5*10**11))
+	
+	xt=[]  #Earth's orbit
+	yt=[]
+	for i in frange(0,2*np.pi,0.01):
+			xt.append(1.5*10**11*np.cos(i)/(1.5*10**11))
+			yt.append(1.5*10**11*np.sin(i)/(1.5*10**11))
+	
+	
+	plt.plot(x,y)			#plot results
+	plt.plot(x,y,'--',color='blue')
+	plt.plot(xt,yt)
+	plt.plot(xm,ym)
+	plt.axis('equal')
+	plt.plot([xmf],[ymf],'rs')
+	plt.plot([xnf],[ynf],'bs')
+
+	
+\end{minted}
 
 \end{document}
 
