@@ -259,6 +259,18 @@ Furthermore, it is required to know $\alpha(t)$ in order to design the flight pl
 	\caption{Representation of the manoeuvres needed to stabilize the orbit.}
 \end{figure}
 \section{Conclusions}
+\subsection{Discussion of the results}
+The model proposed proves a solar sail mission to Mars is viable, in terms of cargo carried and time of flight.
+
+Under a first approximation, a distribution of mass among payload and sail has been set to \SI{1000}{kg} each, yielding a reasonable time of flight comparing it to litterature and previous missions to Mars. The amount of cargo seems also reasonable according to such sources.
+
+After deriving the set of differential equations determining the trajectory of the sail, one can make the rather good approximation of supposing the radial velocity to be constant over time. This allows he equations of moviement to be analitically solved, and one finds that, under this approximation, the sail's trajectory is a logarithmic spiral. Then, an optimal starting position of the sail can be found, in terms of the time it takes to get to Mars' orbit, as well as a first approximation of this time. Indeed, reaching Mars' orbit is rather simple, but one finds it too complex to calculate an initial configuration that would assure the spacecraft reachin Mars' itself, and not just its orbit.  
+
+In order to model the problem in a more detalied manner, the general differential equations have to be numerically solved, which allows us to simulate the sail's trajectory. As pointed by the previously mentioned approximation, initial conditions asssuring arrival on the target could not be found under the assumptions given by the problem. Nevertheless, some trajectories have been proposed. These take the sail close enough to Mars to start thinking of landing manoeuvers, and the relative velocities between both bodies fall under the demanded interval. The values for the time of travel of these trajectories are reasonably higher than the optimals, and greater than those of previous missions.
+
+Finally, it has been proposed to approximately ACOPLAR!? the sail's orbit to Mars'. This ensures the spacecraft will reach its target, since both linear velocities are not equal, and to do so with a low relative speed to it. However, simulations show a travel flight of up to five years to ensure contact. A flight plan has been proposed for this latter trajectory, meaning certain changes of the sail's orientation at certain times have been proven to follow such a trajectory.  
+
+
 \subsection{Strengths and weaknesses}
 Research done suggests different aspects of the model which could be remarked:
 \begin{itemize}
