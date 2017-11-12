@@ -8,8 +8,9 @@
 *.aux
 *.synctex.gz
 *.blg
-*.toc
+Uphysicsc.toc
 *.ilg
 *.ind
-_minted-UPhsyicsC/*
+_minted-UPhsyicsc/*
 Uphysicsc.pdf
+Uphysicsc.run.xml
