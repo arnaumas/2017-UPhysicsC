@@ -39,9 +39,9 @@
 
 \noindent \hrulefill \\
 \begin{abstract}
-The aim of this report is to discuss the viability of a solar sail mission to Mars, in terms of payload and flight time. Results have been mainly obtain by building a model of the problem, ruled by the initial conditions and the forces acting on the space craft. Under some approximations, the model can be anallytically solved, but the complete set of differential equations had to be numerically solved and simulated. 
+The aim of this report is to discuss the viability of a solar sail mission to Mars, in terms of payload and flight time. Results have been mainly obtain by building a model of the problem, ruled by the initial conditions and the forces acting on the spacecraft. Under some approximations, the model can be anallytically solved, but the complete set of differential equations had to be numerically solved and simulated. 
 
-Results show such a mission would be indeed feasible, and a distrubution of weight involving a payload of \SI{1000}{kg} is suggested, giving a reasonable flight time of between 290 and 460 days, depending on trajectory. Actual arrival to Mars has been found to be uncomputable given the initial conditions, but different trajectories have been proposed to reach its orbit, or even passing close to it, as well as one accopling to it. A flight plan has been concluded for the latter, including necessary manoeuvers along the voyage. Relative velocities between the space craft and Mars have been computed, finding values among the interval needed for a safe landing.
+Results show such a mission would be indeed feasible, and a distrubution of weight involving a payload of \SI{1000}{kg} is suggested, giving a reasonable flight time of between 290 and 460 days, depending on trajectory. Actual arrival to Mars has been found to be uncomputable given the initial conditions, but different trajectories have been proposed to reach its orbit, or even passing close to it, as well as one accopling to it. A flight plan has been concluded for the latter, including necessary manoeuvers along the voyage. Relative velocities between the spacecraft and Mars have been computed, finding values among the interval needed for a safe landing.
 
 \end{abstract}
 \hrulefill \\
@@ -67,9 +67,9 @@ However, more complexity needed to be introduced to the model in order to unders
  
  It will be understood that the sail starts its trajectory with a radial velocity equal to the Earth's escape velocity, and with a tangential velocity equal to the Earth's linear velocity around the Sun. 
  
-The release of the space craft will be considered at the time in which the Earth is closest to Mars, although, as it will be further discussed, results do not point in this being the best configuration. Since orbits of both planets are regarded as circular, as mentioned in the following section, this occurs when the Earth, Mars and the Sun are aligned.
+The release of the spacecraft will be considered at the time in which the Earth is closest to Mars, although, as it will be further discussed, results do not point in this being the best configuration. Since orbits of both planets are regarded as circular, as mentioned in the following section, this occurs when the Earth, Mars and the Sun are aligned.
 
-The main goals of the article are to discuss a suitable distribuiton of the mass of the space craft, as well as to simulate possible trajectories and the arrival of the sail to Mars.
+The main goals of the article are to discuss a suitable distribuiton of the mass of the spacecraft, as well as to simulate possible trajectories and the arrival of the sail to Mars.
 
 \subsection{General assumptions}
 When one considers the general model of a solar sail orbiting the Sun, one finds that the acceleration of the center of mass of the sail-Sun system is non-vanishing, and therefore, taking the center of mass as the origin of the reference frame, as we do in subsequent calculations, does not yield an inertial frame. However, this acceleration is negligible and so we use the approximation that the acceleration of the center of mass of the Sun-sail system ---which can in turn be approximated by the Sun's position--- is zero.
@@ -218,15 +218,15 @@ The simulation in  \autoref{fig:simu} has been run under the assumption that the
 
 The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Considering both trajectories tangential, which, as seen in the Figure, is feasible, the sail's relative velocity to Mars is \SI{-8,5}{km\cdot s^{-1}} at the intersection of both trajectories. Travel time is 248 days according to the simulation.
 
-However, as pointed in Section 3.2, the sail reaches Mars orbit when the planet is to far for the space craft to land or start orbiting it. The simulation does not take into account Mars' gravitational pull, but research points it is not strong enough to change this situation.
+However, as pointed in Section 3.2, the sail reaches Mars orbit when the planet is to far for the spacecraft to land or start orbiting it. The simulation does not take into account Mars' gravitational pull, but research points it is not strong enough to change this situation.
 
  
 The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained arguing the sole effect of the escape velocity the sail has is that of counteracting Earth's pull.
 
 
-In a first attempt of reaching Mars from the initial proposed configuration and without a need of manouvers, simulations have been run in order to find a proper sail angle and flight plan. \autoref{fig:espirals} shows some representative results of such simulations. As it has been mentioned before, gravitational pull from Mars has not been taken into account when running the simulations, since it is thought not to be strong enough to have considerable effects on the trajectory. However, in trajectories passing close enough to the planet, as such presented in \autoref{fig:espirals}, the attractive force of gavity will eventually be important enough to take into account, which will, on the one hand, enable the space craft to reach the target, but will also affect on its relative velocity to in. In an attempt of approximating this velocity, we first simulate the relative speed between both bodies at the time plotted.
+In a first attempt of reaching Mars from the initial proposed configuration and without a need of manouvers, simulations have been run in order to find a proper sail angle and flight plan. \autoref{fig:espirals} shows some representative results of such simulations. As it has been mentioned before, gravitational pull from Mars has not been taken into account when running the simulations, since it is thought not to be strong enough to have considerable effects on the trajectory. However, in trajectories passing close enough to the planet, as such presented in \autoref{fig:espirals}, the attractive force of gavity will eventually be important enough to take into account, which will, on the one hand, enable the spacecraft to reach the target, but will also affect on its relative velocity to in. In an attempt of approximating this velocity, we first simulate the relative speed between both bodies at the time plotted.
 
-Assuming the trajectories of Mars and the space craft to be tangential in the first three plots in Figure 5, as they are in good aproximation, one gets relative speeds of \SI{-8,5}{km\cdot s^{-1}}, \SI{-3.5}{km\cdot s^{-1}}  and \SI{-4.7}{km\cdot s^{-1}}, meaning the planet is reachisg the sail. As it has been said, this results do not consider Mars' pull,  but they are believed to be suitable for the start of a landing maneuver in the cases where the distance between both bodies allow it.
+Assuming the trajectories of Mars and the spacecraft to be tangential in the first three plots in Figure 5, as they are in good aproximation, one gets relative speeds of \SI{-8,5}{km\cdot s^{-1}}, \SI{-3.5}{km\cdot s^{-1}}  and \SI{-4.7}{km\cdot s^{-1}}, meaning the planet is reachisg the sail. As it has been said, this results do not consider Mars' pull,  but they are believed to be suitable for the start of a landing maneuver in the cases where the distance between both bodies allow it.
 
 
 
@@ -236,7 +236,7 @@ Assuming the trajectories of Mars and the space craft to be tangential in the fi
 	\includegraphics[scale=0.5]{simulacio2.png}
 	\includegraphics[scale=0.5]{simulacio3.png}
 	\includegraphics[scale=0.5]{simulacio4.png}
-	\caption{Simulation of sail trajectories for different sail angles, $\alpha$, in radians. T indicates the time of flight, in days. The green orbit is Earth's, and the red one is Mars'. The blue square indicates the intersection between Mars' orbit and the trajectory of the space craft, and the red square indicates the position of Mars at this exact time. Axes in AU.}
+	\caption{Simulation of sail trajectories for different sail angles, $\alpha$, in radians. T indicates the time of flight, in days. The green orbit is Earth's, and the red one is Mars'. The blue square indicates the intersection between Mars' orbit and the trajectory of the spacecraft, and the red square indicates the position of Mars at this exact time. Axes in AU.}
 	\label{fig:espirals}
 \end{figure}
 \subsection{Sail steering}
