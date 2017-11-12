@@ -152,7 +152,7 @@ Finally, we can rewrite the equations of motion for a solar sail in this more ge
 \end{align}
 As a consistency check, we note that if \( \alpha = 0 \), that is, the sail is orthogonal to the radiation, we recover \autoref{eq:equations of motion characteristic accelerations}. However, the equations we have just obtained are \emph{not} the equations for a particle experiencing central force motion.   
 
-\section{First model}
+\section{Model analysis and results}
 \subsection{Feasibility of the trip}
 To solve \autoref{eq:equations of motion general case} it is common to assume \( \dot{v}_r = 0\), as done in \cite{tsu} and \cite{mcinnes}. With this assumption the equations become those of a logarithmic spiral. Then \( v_r = \dot{r} \) can be isolated and then integrated to find an expresssion for the time of travel between two circular and coplanar orbits of a given radius in terms of only the parameters \( \alpha \), \( a_R \) and \( a_G \):
 
@@ -200,7 +200,7 @@ With a total available mass of \SI{2000}{kg}, a manned mission propelled with a 
 
 \subsection{Intercepting Mars}
 
-Thus far we have found the time it would take for the sail to complete the change of orbit. However, if our goal is for the payload to arrive at Mars, then the sail should intercept Mars' orbit at a time when Mars' position is close enough to capture the sail. Considering the simplified equations of motion, the equation for the orbit, \( r(\theta \), is found to be exponential in \( \theta \) (\cite[p. 155]{mcinnes}). Then, the angle at which the sail intersects the orbit of Mars can be found ---having taken \( \theta = 0	\) to be the Mars-Earth close approach---. Its value is around \SI{4.7}{rad}. We can then compute the position of Mars at this instant, given that we have assumed it is following its orbit in uniform circular motion. This position is at \( \theta = \SI{3.6}{rad} \), and thus an encounter does not take place in this conditions.
+Thus far we have found the time it would take for the sail to complete the change of orbit. However, if our goal is for the payload to arrive at Mars, then the sail should intercept Mars' orbit at a time when Mars' position is close enough to capture the sail. Considering the simplified equations of motion, the equation for the orbit, \( r(\theta) \), is found to be exponential in \( \theta \) (\cite[p. 155]{mcinnes}). Then, the angle at which the sail intersects the orbit of Mars can be found ---having taken \( \theta = 0	\) to be the Mars-Earth close approach---. Its value is around \SI{4.7}{rad}. We can then compute the position of Mars at this instant, given that we have assumed it is following its orbit in uniform circular motion. This position is at \( \theta = \SI{3.6}{rad} \), and thus an encounter does not take place in this conditions.
 
 We see then that in the conditions of the problem statement, it is not possible to plot a course for Mars with the optimal sail angle. To remedy this it might be possible to course correct with a secondary thrust source, but given the restriction on the total mass of the craft, this is not an option. Alternatively, we might consider a different initial position, but again, the initial position is a requirement of the problem.
 
@@ -212,7 +212,6 @@ Notwithstanding, thinking about using a different flight time suggests what at f
 
 Once different options to approach Mars have been considered it is necessary to estimate the arrival conditions inasmuch as an excessive relative velocity between Mars and the craft may trigger an unsafe landing. 
 
-\section{Results}
 \subsection{Final model. Simulations}
 Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
 

@@ -7,8 +7,7 @@
 \contentsline {subsection}{\numberline {2.1}Radiation pressure}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Equations of motion for a solar sail: orthogonal case}{3}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Equations of motion for a solar sail: general case}{3}{subsection.2.3}
-\contentsline {section}{\numberline {3}First model}{4}{section.3}
+\contentsline {section}{\numberline {3}Model analysis and results}{4}{section.3}
 \contentsline {subsection}{\numberline {3.1}Feasibility of the trip}{4}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Intercepting Mars}{6}{subsection.3.2}
-\contentsline {section}{\numberline {4}Results}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}Final model. Simulations}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {3.3}Final model. Simulations}{6}{subsection.3.3}
