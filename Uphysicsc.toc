@@ -13,4 +13,4 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Intercepting Mars}{6}{subsubsection.3.1.2}
 \contentsline {subsection}{\numberline {3.2}Final model. Simulations}{7}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Sail steering}{8}{subsection.3.3}
-\contentsline {section}{\numberline {A}Python code for numerical solution}{10}{appendix.A}
+\contentsline {section}{\numberline {A}Python code for numerical solution}{11}{appendix.A}
