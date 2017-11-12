@@ -205,11 +205,13 @@ With a total available mass of \SI{2000}{kg}, a manned mission propelled with a 
 \subsection{Intercepting Mars}
 
 Thus far we have found it would take the sail to complete the change of orbit. However, if our goal is for the payload to arrive at Mars, then the sail should intercept Mars' orbit at a time when Mars' position is close enough to capture the sail. Considering the simplified equations of motion, the equation for the orbit, \( r(\theta \), is found to be exponential in \( \theta \) (\cite[p. 155]{mcinnes}). Then, the angle at which the sail intersects the orbit of Mars can be found ---having taken \( \theta = 0	\) to be the Mars-Earth close approah---. Its value is around \SI{4.7}{rad}. We can then compute the position of Mars at this instant, given that we have assumed it is following its orbit in uniform circular motion. This position is at \( \theta = \SI{3.6}{rad} \), and thus an encounter does not take place in this conditions.
->>>>>>> 7b1232cdecdc885dff42ed2a38e30788d3ad9fa0
+
 
 As a consequence, different options can be thought in order to solve this. The first one may consist in modifying the followed path by finding a secondary thrust source though attending to allowed payload this does not seem viable. On the other hand, a different initial condition could be considered in order to compensate the final angle difference between the craft and Mars. This will consist in launching the solar sail not at the closest approach to Mars but with an initial phase difference so that an encounter can be guaranteed. Nevertheless, this idea will not be developed in the survey as a better performance with this initial conditions is assessed in the following sections.
  
-Notwithstanding, thinking about using a different flight time suggests a better option. Taking the optimal sail pitch angle implies a fixed value of the flight time which in fact, is the minimal one. However, a greater time may be used in order to achieve a better approach to Mars.
+Notwithstanding, thinking about using a different flight time suggests what at first sight could seem a better option. Taking the optimal sail pitch angle implies a fixed value of the flight time which in fact, is the minimal one. However, a greater time may be used in order to achieve a better approach to Mars. Computing this, it is found that there is not $\alpha$ so that final angles of Mars and the craft are the same. On the other hand, looking for the best initial angle one obtains that making $\alpha=0.557$rad implies a minimal difference between these two angles. However, this is rather similar to the optimal sail pitch angle and hence, the two angles will still vary on a value close to 1rad, which does not make a significant difference. Further on it is shown that using this same strategy could have a grat impact at the time of designing an optimal flight plan.
+
+Once different options to approach Mars have been considered it is necessary to estimate the arrival conditions inasmuch as an excessive relative velocity between Mars and the craft may trigger an unsafe landing. 
 \section{No sé quin títol}
 \subsection{First simulation?}
 Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
@@ -224,11 +226,7 @@ Solutions of equations \ref{eq:equations of motion general case} and 2.14 have b
 	\includegraphics[scale=0.5]{simu.png}
 	\caption{\small Simulation of the trajectory of the sail. The Sun is at the origin and axes are in AU. The blue squared represents the sail when reaching Mars' orbit, and the red square Mars at this same time}
 	\label{fig:simu}
-\end{figure}
-<<<<<<< HEAD
-As it can be seen in \autoref{fig:simu},  
-=======
- 
+\end{figure} 
 The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained arguing the sole effect of the escape velocity the sail has is that of counteracting Earth's pull.
 
 \begin{figure}
@@ -241,8 +239,6 @@ The simulation in  \autoref{fig:simu} has been run under the assumption that the
 	\label{fig:espirals}
 \end{figure}
 
-
->>>>>>> 3a868df1e0014b08a1b27dbe8948fe04ca8dc624
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
 
