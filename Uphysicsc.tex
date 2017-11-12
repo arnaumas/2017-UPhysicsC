@@ -47,7 +47,13 @@ Test test test
 \clearpage
 
 \section{Introduction}
-\subsection{Restatement of the problem}
+
+\subsection{Approach}
+The motion of a solar sail within the Solar System, after a number of assumptions have been made, can be modeled by a set of relatively concise differential equations. Therefore, the problem at hand essentially becomes an initial value problem. 
+
+As a first approximation, it can be found that a solar sail moves following as a logarithmic spiral. We used this fact to determine the feasibility of a trip from Earth to mars using solar sail propulsion, and to give a lower bound on the size of the sail for this trip to take a reasonable amount of time.
+
+However, more complexity needed to be introduced to the model in order to understand the later stages of the trip, namely, from the point when the gravitational pull of Mars is no longer negligible. This means that the equations are no longer solvable analitically, so numerical methods must be used.
 
  A more detailed interpretation of the problem was needed so that a more precise model could be built. Understanding firstly the physical foundations around solar sailing was essential in order to perform an accurate analysis. Research has been done on the different forces affecting the sail for trajectories to be computed. Since some initial conditions are already given it has been necessary to verify whether these were the best options to accomplish the overall goal of the study or not.
  
@@ -60,6 +66,8 @@ The release of the space craft will be considered at the time in which the Earth
 The main goals of the article are to discuss a suitable distribuiton of the mass of the space craft, as well as to simulate possible trajectories and the arrival of the sail to Mars.
 
 \subsection{Main assumptions}
+To model the motion of a solar sail, we assumed it to be subject solely to the gravitational attraction from the Sun and solar radiation pressure. This yields a meaningful first approximation which can be used to gain insight on 
+
 Throughout the article, several assumptions have been made, both as interpretations of the problem and in order to facilitate the model. However, all assumptions are supported by literature, and all the approximations were found to be reasonable. We present the approximations and interpretations made.
 
 \begin{itemize}
@@ -96,7 +104,7 @@ Thus, we are now in a position to write the equations of motion for the solar sa
 	a_{\theta} &= \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} = 0 
 \end{align}
 It is common to introduce a number of parameters to better encapsulate the nature of a solar sail. The characteristic acceleration of a solar sail, \( a_R \), is defined to be the acceleration the sail experiences due to radiation pressure at a distance equal to 1 astronomical unit (AU) from the Sun. In keeping with the notation introduced in the previous section we write
-\begin{equation}
+\begin{equation} \label{eq:characterisit acceleration}
   a_R = \dfrac{2SI_0}{mc}
 \end{equation}
 It is then immediate to see that, if we denote the acceleration due to radiation pressure by \( a_R \) we have
@@ -127,14 +135,20 @@ And thus we obtain
 \end{align}
 
 Finally, we can rewrite the equations of motion for a solar sail in this more general case as follows:
-\begin{align}
-  \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2\label{carlessexy} \\ 
-  \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= -a_R	\sin{\alpha} \cos^2{\alpha} \left(\dfrac{r_0}{r}\right)^2\label{carlessexy2}
+\begin{align} \label{eq:equations of motion general case}
+  \dot{v}_r - \dfrac{v_{\theta}^2}{r} &= (a_R \cos^3{\alpha} - a_G) \left(\dfrac{r_0}{r}\right)^2 \\ 
+  \dot{v}_{\theta} + \dfrac{v_r v_{\theta}}{r} &= -a_R	\sin{\alpha} \cos^2{\alpha} \left(\dfrac{r_0}{r}\right)^2
 \end{align}
 As a consistency check,  we note that if \( \alpha = 0 \), that is, the sail is orthogonal to the radiation, we recover \autoref{eq:equations of motion characteristic accelerations}. However, the equations we have just obtained are \emph{not} the equations for a particle experiencing central force motion.   
 
 \section{First Results}
-\subsection{The logarithmic spiral trajectory and discussion of a suitable distribuiton of mass}
+\subsection{Feasibility of the trip}
+To solve \autoref{eq:equations of motion general case} it is common to assume \( \dot{v}_r = 0\), as done in \cite{tsu} and \cite{mcinnes}. Then, the equations become those of a logarithmic spiral. Then, \( v_r = \dot{r} \) can be isolated and then integrated to find an expresssion for the time of travel between two orbits of a given radius in terms of only the parameters \( \alpha \), \( a_R \) and \( a_G \):
+
+\begin{equation} \label{eq:time of flight between orbits}
+	t=\frac{1}{3}\cdot\frac{r_0^{3/2}-r^{3/2}}{r_0\sqrt{a_R}}\cdot\frac{(a_G/a_R-\cos^3\alpha)^{1/2}}{\sin\alpha\cos^2\alpha}
+\end{equation}
+
 According to what has been discussed in the previous section, there are some variables of the sail which have to be calculated. This are
 \[
 a_R=6,45\cdot 10^{-7} \cdot m_s
@@ -162,9 +176,6 @@ Figure 1 shows a first approximation of the trajectory taken by the space craft 
 
 
 Solving Equation 3.1 for $v_{\theta}$ and directly integrating, one can find the time of travel between radii $r_0$ and $r$.
-\begin{equation}
-	t=\frac{1}{3}\cdot\frac{r_0^{3/2}-r^{3/2}}{r_0\sqrt{a_R}}\cdot\frac{(a_G/a_R-\cos^3\alpha)^{1/2}}{\sin\alpha\cos^2\alpha}
-\end{equation}
 In order to optimize the flight time it is useful to define the solar sail lightness number which can be calculated as
 \begin{equation}
 	\beta=\frac{a_R}{a_G}
