@@ -184,7 +184,7 @@ With a total available mass of \SI{2000}{kg}, a manned mission propelled with a 
 
 \section{No sé quin títol}
 \subsection{First simulation?}
-Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig: first}.
+Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail when launched with the omptimal angle descussed in Section 3.1, $\alpha=35.21º$. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig:logarithmic spiral}, nor the trajectory is a logarithmic spiral.
 
 \begin{figure}[h]
 	\centering
@@ -193,7 +193,16 @@ Solutions of equations \ref{eq:equations of motion general case} and 2.14 have b
 	\label{fig:simu}
 \end{figure}
  
-As it can be seen in \autoref{fig:simu},  
+The simulation in  \autoref{fig:simu} has been run under the assumption that the initial radial velocity of the sail is nule. This idea, supported by litterature and flight plans of previous missions, can be explained 
+
+\begin{figure*}
+	\centering
+	\includegraphics[scale=0.7]{simulacionsvaries.png}
+	\label{espirals}
+	\caption{Sail trajectories for different sail angles, $\alpha$, in radians. T indicates the time of flight, in days. The green orbit is Earth's, and the red one is Mars'. The blue square indicates the intersection between Mars' orbit and the trajectory of the space craft, and the red square indicates the position of Mars at this exact time. }
+	\label{fig:espirals}
+\end{figure*}
+
 
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
