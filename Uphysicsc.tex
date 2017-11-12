@@ -180,6 +180,7 @@ Figure 1 shows a first approximation of the trajectory taken by the space craft 
 	\includegraphics[scale=0.5]{espiral.png}
 	\label{espiral}
 	\caption{\small First approximation of the sail trajectory, in blue. The Sun is in the middle and the dashed lines represent the orbits of the Earth and Mars. Axis in AU.}
+	\label{fig: first}
 	
 \end{figure}
 
@@ -230,6 +231,17 @@ Solutions of equations \ref{carlessexy} and \ref{carlessexy2} have been simulate
 
 The simulation also allows us to find a first approximation of the velocity with which the sail reaches Mars. Without considering the gravitational pull exerted by Mars, and approximating both curves to tangent, the relative velocity between both bodies is $-4$km/s, meaning Mars, which is behind the sail, reaches the spacecraft at a speed of $4$km/s.
 
+Solutions of equations \ref{eq:equations of motion general case} and 2.14 have been simulated. \autoref{fig:simu} shows the trajectory followed by the sail. Note that the trajectory of the sail is not tangent to the orbit of Mars at the point of intersection, as it was in \autoref{fig: first}.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{simu.png}
+	\caption{\small Simulation of the trajectory of the sail. The Sun is at the origin and axes are in AU. The blue squared represents the sail when reaching Mars' orbit, and the red square Mars at this same time}
+	\label{fig:simu}
+\end{figure}
+ 
+As it can be seen in \autoref{fig:simu},  
 
 \bibliographystyle{ieeetr}
 \bibliography{UphysicscNotes}
