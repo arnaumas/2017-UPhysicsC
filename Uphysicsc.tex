@@ -56,21 +56,7 @@ All of these results seem to suggest that solar sailing is indeed a suitable met
 \section{Introduction}
 
 \subsection{Approach}
-The motion of a solar sail within the Solar System, after a number of assumptions have been made, can be modeled by a set of relatively concise differential equations. Therefore, the problem at hand essentially becomes an initial value problem. 
-
-As a first approximation, it can be found that a solar sail moves following as a logarithmic spiral. We used this fact to determine the feasibility of a trip from Earth to mars using solar sail propulsion, and to give a lower bound on the size of the sail for this trip to take a reasonable amount of time.
-
-However, more complexity needed to be introduced to the model in order to understand the later stages of the trip, namely, from the point when the gravitational pull of Mars is no longer negligible. This means that the equations are no longer solvable analitically, so numerical methods must be used.
-
- A more detailed interpretation of the problem was needed so that a more precise model could be built. Understanding firstly the physical foundations around solar sailing was essential in order to perform an accurate analysis. Research has been done on the different forces affecting the sail for trajectories to be computed. Since some initial conditions are already given it has been necessary to verify whether these were the best options to accomplish the overall goal of the study or not.
- 
-  Moreover the aim of the survey is not only to calculate the path followed by the craft but also to determine its velocity so that a safe landing can be guaranteed. However, as trying to consider the attraction of Mars does not always give accurate results, this is not an easy task, though an estimate of craft arrival to Mars is presented at the end.
- 
- It will be understood that the sail starts its trajectory with a radial velocity equal to the Earth's escape velocity, and with a tangential velocity equal to the Earth's linear velocity around the Sun. 
- 
-The release of the spacecraft will be considered at the time in which the Earth is closest to Mars, although, as it will be further discussed, results do not point in this being the best configuration. Since orbits of both planets are regarded as circular, as mentioned in the following section, this occurs when the Earth, Mars and the Sun are aligned.
-
-The main goals of the article are to discuss a suitable distribuiton of the mass of the spacecraft, as well as to simulate possible trajectories and the arrival of the sail to Mars.
+We will attempt to develop a model for the motion of a solar sail subject to the influence, both gravitational and electromagnetic, of the Sun, based on the equations of motion that govern it. The data given in the problem statement will then be taken as the initial conditons for this initial value problem. Whatever parameters characterize a solar sail will then be optimized to accomodate for the two main goals of the problem: a fast and save arrival to Mars and sufficient payload for the mission to make sense.
 
 \subsection{General assumptions}
 When one considers the general model of a solar sail orbiting the Sun, one finds that the acceleration of the center of mass of the sail-Sun system is non-vanishing, and therefore, taking the center of mass as the origin of the reference frame, as we do in subsequent calculations, does not yield an inertial frame. However, this acceleration is negligible and so we use the approximation that the acceleration of the center of mass of the Sun-sail system ---which can in turn be approximated by the Sun's position--- is zero.
