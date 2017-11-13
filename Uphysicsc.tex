@@ -40,13 +40,13 @@
 
 \noindent \hrulefill \\
 \begin{abstract}
-The aim of this report is to discuss the viability of a solar sail mission to Mars, in terms of payload and flight time. Results have been mainly obtained by building a model of the problem, ruled by the initial conditions and the forces acting on the space craft. Under some approximations, the model can be anallytically solved, but the complete set of differential equations had to be numerically solved and simulated. 
+The aim of this report is to discuss the viability of a solar sail mission to Mars. Results have been obtained by attempting to solve the equations that govern the motion of a solar sail in the Solar System. Under suitable approximations, these are analytically solvable. The general case, however, is not, and required the use of numerical techniques. 
 
-Results show such a mission would be indeed feasible, and a distrubution of weight involving a payload of \SI{1000}{kg} is suggested, giving a reasonable flight time of between 290 and 460 days, depending on trajectory. Actual arrival to Mars has been found to be of an extreme complexity given the initial conditions, but different trajectories have been proposed to reach its orbit, or even passing close to it, as well as one accopling to it. A flight plan has been concluded for the latter, including necessary manoeuvers along the voyage. Relative velocities between the space craft and Mars have also been computed, finding values among the interval needed for a safe landing.
+Results show such a mission would be indeed feasible, allowing for payloads of \SI{1000}{kg} to be sent to Mars' orbit within about a year. However, actual arrival to Mars, subject to the required initial conditions, has been found to be of high complexity. In spite of this, some trajectories have been found that bring the craft close enough to Mars at the cost of a higher, even if still reasonable, travel time. Additionally, with the introduction of a simple steering maneuver, it has been found that it is possible for the solar sail to reach the orbit of Mars and to remain stable in it for a sufficiently long timescale.
 
+All of these results seem to suggest that solar sailing is indeed a suitable method of light inner Solar System travel, especially given its simplicity when compared to the other more common options. 
 \end{abstract}
 \hrulefill \\
-
 \end{titlingpage}
 
 \begin{titlingpage}
@@ -191,7 +191,7 @@ Of course, there is no sail mass which produces an optimum time, since allotting
 	\label{fig:time of flight}
 \end{figure}
 
-With a total available mass of \SI{2000}{kg}, a manned mission propelled with a solar sail is obviously not possible. The purpose of a solar sail would then be to send unmanned cargo to Mars, possibly satellites or rovers to explore its surface. According to \cite{presskit}, the Mars Science Lab (MSL) mission, which sent the rover Curiosity to Mars, had a total mass of \SI{3893}{kg}. The rover itself, however had a mass of \SI{899}{kg}, and most of the remaining mass of the mission was destined to propulsion systems. Given that a hypothetical solar sail propelled mission would have no need for fuel tanks or propulsion systems, it seems reasonable that a payload mass of \SI{1000}{kg} would suffice to carry a rover or similar device to Mars. This would leave another \SI{1000}{kg} to be used for a sail of area \SI{142857}{m^2}. As such, the total time to travel to Mars in these conditions is of approximately 390 days. Again, comparing with a mission such as MSL, which took 254 days to reach Mars, we find that this time is higher, but the potentials savings in fuel and propulsion would possibly make up for it. Therefore we conclude that solar sailing is a viable means of sending small cargo to Mars. 
+With a total available mass of \SI{2000}{kg}, a manned mission propelled with a solar sail is obviously not possible. The purpose of a solar sail would then be to send unmanned cargo to Mars, possibly satellites or rovers to explore its surface. According to \cite{presskit}, the Mars Science Lab (MSL) mission, which sent the rover Curiosity to Mars, had a total mass of \SI{3893}{kg}. The rover itself, however had a mass of \SI{899}{kg}, and most of the remaining mass of the mission was destined to propulsion systems. Given that a hypothetical solar sail propelled mission would have no need for fuel tanks or propulsion systems, it seems reasonable that a payload mass of \SI{1000}{kg} would suffice to carry a rover or similar device to Mars. This would leave another \SI{1000}{kg} to be used for a sail of area \SI{142857}{m^2}. From now on, then, we will perform all calculations assuming a sail mass of \SI{1000}{kg} and therefore a lightness parameter \( \beta \) of 0.1. As such, the total time to travel to Mars in these conditions is of approximately 390 days. Again, comparing with a mission such as MSL, which took 254 days to reach Mars, we find that this time is higher, but the potentials savings in fuel and propulsion would possibly make up for it. Therefore we conclude that solar sailing is a viable means of sending small cargo to Mars. 
 
 \subsection{Intercepting Mars}
 
@@ -242,77 +242,73 @@ So far it has been seen that, in the required conditions, it is hard to plot a c
 	\centering
 	\label{fig:maniobres}
 	\includegraphics[scale=0.55]{Maniobres.png}
-	\caption{Trajectory of the sail with the trajectory correcting maneuvres required to stabilize the orbis.The yellow dots show the places at which a sail angle shift takes place. The blue dot shows the sail at the time in intersects Mars' orbit. Axes in AU.}
+	\caption{Trajectory of the sail with the trajectory correcting maneuvers required to stabilize the orbis.The yellow dots show the places at which a sail angle shift takes place. The blue dot shows the sail at the time in intersects Mars' orbit. Axes in AU.}
 \end{figure}
 
-A possible way to solve this problem would be to change the orientation of the sail as a means to correct the velocity and trajectory of the sail. In \cite{xinos} a time profile for the sail angle is determined given a set of initial conditions. The complexity of the methods was too high to be applied in this situation, however, the characteristics of the solar sail in \cite{xinos} where similar enough to the ones in the present case to serve as a reference point. The basic idea is to start the trip with the optimal sail angle, which is then increased and then progressively decreased until it reaches zero when the sail is ar Mars' orbit. The purpose behind this profile is to ensure that the sail arrives at the orbit of Mars' with the sail perpendicular to the incoming radiation (zero sail angle).
-
-
-Obviously, one must not forget that the orbit achieved is not the same as Mars one, but it is actually really close. Notice, moreover, that the last manoeuvre sets $\alpha=0$ something which will imply a resulting force characteristic of a central force, a bit different of the gravitational one because of the sun light orthogonal incidence. Calculations give a really close proximity between Mars and the craft within 5 years since the launching moment with initial conditions, and a relative speed of $2$km/s, something that will ensure a safe landing. Simulation also suggests another monoeuvre would be needed after some years of orbit if it was wanted to mantain it. Even though the aim of this approach was not to land on Mars but to orbit like it, since, changing initial positions in real life would assure the desired landing.
-
-Furthermore, it is required to know $\alpha(t)$ in order to design the flight plan represented in \autoref{fig:maniobres}. This is shown in \autoref{fig:escaleta}. Data of this manoeuvres is inspired once again in \cite{xinos}.
-
+A possible way to solve this problem would be to change the orientation of the sail as a means to correct the velocity and trajectory of the sail. In \cite{xinos} a time profile for the sail angle is determined given a set of initial conditions. The complexity of the methods was too high to be applied in this situation, however, the characteristics of the solar sail in \cite{xinos} where similar enough to the ones in the present case to serve as a reference point. The basic idea is to start the trip with the optimal sail angle, which is then increased and then progressively decreased until it reaches zero when the sail is ar Mars' orbit. The purpose behind this profile is to ensure that the sail arrives at the orbit of Mars' with the sail perpendicular to the incoming radiation (zero sail angle), and thus in the central force regime. The sail then follows an orbit that is really close to the orbit of Mars, and, furthermore, is stable at a relatively long timescale. The actual profile is shown in \autoref{fig:escaleta}.
 
 \begin{figure}
-	\label{fig:escaleta}
 	\includegraphics[scale=0.35]{cocu.png}
-	\caption{Representation of the manoeuvres needed to stabilize the orbit.}
+	\caption{Sail angle time profile.}
+	\label{fig:escaleta}
 \end{figure}
+
 \section{Conclusions}
 \subsection{Discussion of the results}
 The model proposed proves a solar sail mission to Mars is viable, in terms of cargo carried and time of flight.
 
-Under a first approximation, a distribution of mass among payload and sail has been set to \SI{1000}{kg} each, yielding a reasonable time of flight comparing it to litterature and previous missions to Mars. The amount of cargo seems also reasonable according to such sources.
+It has been found that a payload of \SI{1000}{kg} can be propelled by a \SI{376}{m} by \SI{376}{m} sail to the orbit of Mars in time less than a year.
 
-After deriving the set of differential equations determining the trajectory of the sail, one can make the rather good approximation of supposing the radial velocity to be constant over time. This allows he equations of moviement to be analitically solved, and one finds that, under this approximation, the sail's trajectory is a logarithmic spiral. Then, an optimal starting position of the sail can be found, in terms of the time it takes to get to Mars' orbit, as well as a first approximation of this time. Indeed, reaching Mars' orbit is rather simple, but one finds it too complex to calculate an initial configuration that would assure the spacecraft reachin Mars' itself, and not just its orbit.  
+After deriving the set of differential equations determining the trajectory of the sail, one can make the rather good approximation of assuming the radial velocity to be constant over time. This allows the equations of movement to be analitically solved, and one finds that, under this approximation, the sail's trajectory is a logarithmic spiral. Then, an optimal sail pitch angle can be found, in terms of the time it takes to get to Mars' orbit, as well as a first approximation of this time. Indeed, reaching Mars' orbit is rather simple, but one finds it too complex to calculate an initial configuration that would assure the spacecraft reaching Mars itself, and not just its orbit.  
 
-In order to model the problem in a more detalied manner, the general differential equations have to be numerically solved, which allows us to simulate the sail's trajectory. As pointed by the previously mentioned approximation, initial conditions asssuring arrival on the target could not be found under the assumptions given by the problem. Nevertheless, some trajectories have been proposed. These take the sail close enough to Mars to start thinking of landing manoeuvers, and the relative velocities between both bodies fall under the demanded interval. The values for the time of travel of these trajectories are reasonably higher than the optimals, and greater than those of previous missions.
+In order to model the problem in a more detailed manner, the general differential equations have to be numerically solved, which allows one to simulate the sail's trajectory. Even in this more general case, initial conditions asssuring arrival on the target could not be found under the assumptions given by the problem. Nevertheless, some trajectories have been proposed. These take the sail close enough to Mars to start thinking of landing maneuvers, and the relative velocities between both bodies fall under the required safety interval. The values for the time of travel of these trajectories are reasonably higher than the optimals, and greater than those of previous missions.
 
-Finally, it has been proposed to approximately ACOPLAR!? the sail's orbit to Mars'. This ensures the spacecraft will reach its target, since both linear velocities are not equal, and to do so with a low relative speed to it. However, simulations show a travel flight of up to five years to ensure contact. A flight plan has been proposed for this latter trajectory, meaning certain changes of the sail's orientation at certain times have been proven to follow such a trajectory.  
-
+Finally, it has been proposed to use sail steering to alter the course at certain points to reach Mars' orbit in approximately stable conditions, such that the sail would remain in it for a sufficiently long timescale. This ensures the spacecraft will eventually be overtaken by Mars since it arrives at the orbit at a negative relative speed. However, simulations show a travel flight of up to five years to ensure contact. 
 
 \subsection{Strengths and weaknesses}
-Research done suggests different aspects of the model which could be remarked:
+Research done points to these being the strongest aspects of the developed model:
 \begin{itemize}
-\item Spacecraft mass is properly distributed between payload and solar sail mass according to previous missions. Moreover this distribution leads to a reasonable flight time.
-\item Results are obtained not only for aproximations but also for exact expressions of motion equations. Calculations allow one to visualize trajectories followed by the craft. In addition, simulations seem to be accurate when boundary values are computed. They give an optimal flight time too.
-\item Different values of sail pitch angle are tried in order to achieve a better approach to Mars. Other possibilities are suggested also for the same reason. 
-\item Arriving to Mars is achieved when taking different initial relative position between the two planets. This is mentioned in the Section 3.2 but also guarantees a succesful mission in Section 3.4. Moreover, it is always made at values of speed that ensure a safe landing.
-\item Last part of the report shows that it is possible to perform a succesful flight by making $\alpha$ a function of time. This is, in a first approach, solved numerically. Also necessary manoeuvres are simulated. 
-\item Survey proves that propelling crafts by solar sails is totally feasible. At least, when an interpletary flight in a reasonable amount of time is pursued.
+\item The upper bound on the payload mass to guarantee reasonable travel times is sufficiently high to accomodate the cargo of previous missions to Mars. 
+\item Results are obtained not only for aproximations but also for the exact form of the equations of motion, even though they are numerical in this last case. Calculations allow one to visualize trajectories followed by the craft. In addition, the simulations display central force motion when the sail angle is 0 and \( \pi/2 \), as predicted by the equations.
+\item Different values of sail pitch angle are tried in order to achieve a better approach to Mars. 
+\item The model developed allows for the sail angle to be non-constant over time, which enabled the investigation of more complex orbits to achieve the desired goal.
 \end{itemize}
 On the other hand work done has also some points than in a certain way could be improved. These are:
 \begin{itemize}
-	\item The initial given conditions do not allow the model to predict an exact and totally accurate flight plan in order to perform a landing on Mars.
-	\item Simulations do not consider Mars attraction force. Even though this interaction is quite small compared to other forces involved, it may cause variations in followed trajectories.
-	\item Analysis in Section 3.4 is not as accurate as the one performed in consulted literature. Used data is partly based on uneducated guess and computed orbit is not the exact Mars' orbit.
-	\item Best results in simulations regarding proximity to Mars are slightly greater than the optimal ones and than the ones in previous missions. 
+	\item The initial given conditions do not allow the model to predict a flight plan that guarantees that the sail will get close enough to Mars to enter its gravitational field
+	\item The simulations do not consider Mars' gravitational attraction. Even though this  is a non issue for virtually all of the orbit, it becomes relevant in the last stages of the trip when the sail approaches Mars.
+	\item The analysis in Section 3.4 is not as accurate as the one performed in consulted literature. The proposed angle profile is partly based on an educated guess from data provided in existing literature and not an exact computation.
+	\item The best results obtained in the simulations regarding proximity to Mars are slightly worse than the optimal ones and than the ones in previous missions. 
 \end{itemize}
+
 \subsection{Future work}
-Different issues of this report could be of greater impact if deeper research were performed on them. Some of them are presented on the following lines.
+Different issues of this report could be of greater impact if deeper research were performed on them. Some of them are presented in the following lines.
 
-Once initial conditions are set, it has been shown in Section 3.4 that it is necessary to vary the pitch sail angle in order to perform a coupling to Mars' orbit. It would be significantly interesting to compute analitically this angle as a function of time. Found this, one could design an accurate flight plan in order to aproach to Mars' orbit at the right instant to be pulled by the attraction force of the planet. In this way and more precisely, it is about optimizing not only the time flight but also the relative position of the spacecraft and Mars at the final moment. All of this could be done by using more complex numerical methods.
+Once initial conditions are set, it has been shown in Section 3.4 that it is necessary to vary the pitch sail angle in order to perform a coupling to Mars' orbit. It would be of significant interest to analitically compute the optimum angle time profile.
 
-Research done proves solar sailing to be a valid method in order to perform such a mission to Mars. Nevertheless, it also shows that different missions could be performed with this propelling system as a substitute of fuel. These includes, among others, orbits exploration, launch of space probes and interplanetary missions. When it is about landing on planets maybe, since no deep research has been done on fuel-based landing methods, solar sails may not the optimal way to do it. Indeed they must be provided with sophisticated systems so that they are allowed to change their trajectories, while with some other propulsion method this would be easier. 
+The research performed proves solar sailing to be a valid propulsion method for small missions to Mars. Nevertheless, it could also serve as a propulsion mechanism for other kinds of inner and outer Solar System missions. This includes, among others, orbits exploration, launch of space probes and interplanetary missions. Regarding the landing stages, no detailed analysis has been performed on planet entry maneuvers with solar sails. 
 
-It would be of a great importance to develop this kind of systems in a bigger scale. Regarding greater distances, solar sailing is obviously an excellent option from the energetic point of view and, moreover, after this first approach seems to be also a suitable option to perform interstellar flights. In addition, bigger dimensions will enable not only higher speeds but also, perhaps, the possibility of having manned spacecrafts based on solar sails.
+It would be of a great importance to develop this kind of systems in a bigger scale. Regarding greater distances, solar sailing is obviously an excellent option from the energetic point of view. In addition, bigger dimensions will enable not only higher speeds but also, perhaps, the possibility of having manned spacecrafts based on solar sails.
+
 \clearpage
+
+\appendix
+\section{References and Further Reading}
 
 \begin{btSect}{UphysicscNotes}
 	\bibliographystyle{ieeetr}
-	\section*{References}	
+	\subsection*{References}	
 	\btPrintCited
 \end{btSect}
 
 \begin{btSect}{UphysicscNotes}
 	\bibliographystyle{ieeetr}
-	\section*{Further Reading}	
+	\subsection*{Further Reading}	
 	\btPrintNotCited
 \end{btSect}
 
 
 \onecolumn
-\appendix
 \section{Python code for numerical solution}
 \begin{minted}[breaklines=true,obeytabs=true,tabsize=2]{python}
 	#Simulation of the sail trajectory
